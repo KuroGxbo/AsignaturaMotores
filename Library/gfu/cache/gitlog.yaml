@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -530159753, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 3
+  lastUpdatedAtString: 2022-11-26T14:04:34.781-05:00
+  initializedAtString: 2022-11-26T14:02:05.096-05:00
+  log:
+  - commitID: 6fc85f1dd90eb5ea8501bb8742dc1f688fb9f2b7
+    mergeA: 
+    mergeB: 
+    authorName: KuroGxbo
+    authorEmail: joshuagabrielp@gmail.com
+    commitEmail: joshuagabrielp@gmail.com
+    commitName: KuroGxbo
+    summary: Initial commit
+    description: 
+    timeString: 2022-11-26T14:02:04.000-05:00
+    commitTimeString: 2022-11-26T14:02:04.000-05:00
+    changes:
+    - path: .gitattributes
+      fullPath: C:\Users\joshu\Unity\AsignaturaMotores\.gitattributes
+      projectPath: .gitattributes
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: .gitignore
+      fullPath: C:\Users\joshu\Unity\AsignaturaMotores\.gitignore
+      projectPath: .gitignore
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\.gitignore
+      fullPath: C:\Users\joshu\Unity\AsignaturaMotores\Assets\.gitignore
+      projectPath: Assets\.gitignore
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
