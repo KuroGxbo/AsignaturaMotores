@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.services.core@1.6.0\Runtime\Device\Unity.Services.Core.Device.asmdef" />
+    <None Include="Library\PackageCache\com.unity.services.core@1.6.0\Runtime\Device\UserIdProviders\NSUserDefaults.mm" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
