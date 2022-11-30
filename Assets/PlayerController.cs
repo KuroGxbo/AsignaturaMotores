@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public CharacterController Control;
     public GameObject Obj;
     public ParticleSystem Attack;
+    public Image Img;
     public float Speed = 80f;
     public float Gravity = -9.81f;
     public float Angle;
