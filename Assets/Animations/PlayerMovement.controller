@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: RunningJump
+    m_ConditionEvent: RunJump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5489759026159785372}
@@ -255,7 +255,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: RunningJump
+    m_ConditionEvent: RunJump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7187628674160034799}
@@ -297,8 +297,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
   - m_Name: RunningJump
+=======
+    m_Controller: {fileID: 0}
+  - m_Name: RunJump
+>>>>>>> 9079fc45 (Enemy Prefabs and Animation)
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
