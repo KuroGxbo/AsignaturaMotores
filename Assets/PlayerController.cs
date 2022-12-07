@@ -11,11 +11,14 @@ public class PlayerController : MonoBehaviour
     public GameObject Obj;
     public ParticleSystem Attack;
     public Image Img;
-    public float Speed = 80f;
+    public float Speed = 1f;
     public float Gravity = -9.81f;
     public float Angle;
     public float turnSmoothTime = 0.1f;
     public float turnSmoothVelocity = 0.5f;
+    float smooth = 5.0f;
+    float tiltAngle = 60.0f;
+    public bool Run=false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,22 +34,19 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float Horizontal = Input.GetAxisRaw("Horizontal");
-        float Vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(Horizontal, Vertical, 0).normalized;
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
 
-        //Movement
-        if (direction.magnitude >= 0.1f)
-        {
-            float targetAngle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg + Position.eulerAngles.y;
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+        movementDirection.Normalize();
 
-            Vector3 moveDir = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
+        transform.Translate(movementDirection * Speed * Time.deltaTime, Space.World);
 
-            Control.SimpleMove(moveDir.normalized * Speed * Time.deltaTime);
-        }
+        transform.rotation = Quaternion.Slerp(Position.rotation, Position.rotation, Time.deltaTime);
 
         //Magic Attack
-        if (Input.GetKeyDown(KeyCode.Q)) {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
 
             Animation.SetTrigger("Magic");
             Attack.Play();
@@ -59,11 +59,14 @@ public class PlayerController : MonoBehaviour
         //Walk Front
         if (Input.GetKeyDown(KeyCode.W))
         {
-            Angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, 90, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0, Angle, 0);
-            Animation.SetTrigger("Walk");
+            Run = true;
            
+
         }
+        if (Run) {
+            Animation.SetTrigger("Walk");
+        }
+
         if (Input.GetKeyUp(KeyCode.W))
         {
             Animation.SetTrigger("Idle");
@@ -71,28 +74,44 @@ public class PlayerController : MonoBehaviour
         //Walk Back
         if (Input.GetKeyDown(KeyCode.S))
         {
-            Angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, 90, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0, Angle, 0);
+            
             Animation.SetTrigger("Walk");
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
             Animation.SetTrigger("Idle");
         }
+        //Walk Front
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            
+            Animation.SetTrigger("Walk");
+
+        }
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            Animation.SetTrigger("Walk");
+        }
+        //Walk Back
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            
+            Animation.SetTrigger("Walk");
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            Animation.SetTrigger("Idle");
+        }
         //Run
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            Speed = 100f;
-            Angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, 90, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0, Angle, 0);
-            Animation.SetTrigger("Run");
+            Run = true;
+            //Animation.SetTrigger("Run");
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            Speed = 80f;
-            Angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, 90, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0, Angle, 0);
-            Animation.SetTrigger("Run");
+            Run = false;
+            //Animation.SetTrigger("Run");
         }
         //Punch
         if (Input.GetKeyDown(KeyCode.E))

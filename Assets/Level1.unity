@@ -304,11 +304,12 @@ MonoBehaviour:
   Obj: {fileID: 0}
   Attack: {fileID: 0}
   Img: {fileID: 0}
-  Speed: 30
+  Speed: 5
   Gravity: -9.81
   Angle: 0
   turnSmoothTime: 0.1
   turnSmoothVelocity: 0.5
+  Run: 0
 --- !u!95 &168164421
 Animator:
   serializedVersion: 4
@@ -5130,7 +5131,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.29083252
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -5214,6 +5215,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168164417}
   m_Enabled: 1
+--- !u!136 &168164426
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168164417}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &279031012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5697,6 +5712,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2293564595568228617, guid: 5f1b5293492e8ef498d0bf4221e0105e, type: 3}
+      propertyPath: m_Height
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293564595568228617, guid: 5f1b5293492e8ef498d0bf4221e0105e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8121505275774178287, guid: 5f1b5293492e8ef498d0bf4221e0105e, type: 3}
       propertyPath: m_Name
       value: Torch (1)
@@ -5814,18 +5837,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1301780916239826522, guid: 01b738166f880344283a98189ccd7957, type: 3}
-      propertyPath: m_Height
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1301780916239826522, guid: 01b738166f880344283a98189ccd7957, type: 3}
-      propertyPath: m_Radius
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1301780916239826522, guid: 01b738166f880344283a98189ccd7957, type: 3}
-      propertyPath: m_Center.y
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3169494122311073105, guid: 01b738166f880344283a98189ccd7957, type: 3}
       propertyPath: m_Name
       value: Base
@@ -5874,26 +5885,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5977505806581739197, guid: 01b738166f880344283a98189ccd7957, type: 3}
-      propertyPath: m_Height
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5977505806581739197, guid: 01b738166f880344283a98189ccd7957, type: 3}
-      propertyPath: m_Radius
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8567194707868659428, guid: 01b738166f880344283a98189ccd7957, type: 3}
-      propertyPath: m_Height
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8567194707868659428, guid: 01b738166f880344283a98189ccd7957, type: 3}
-      propertyPath: m_Radius
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5977505806581739197, guid: 01b738166f880344283a98189ccd7957, type: 3}
-    - {fileID: 1301780916239826522, guid: 01b738166f880344283a98189ccd7957, type: 3}
-    - {fileID: 8567194707868659428, guid: 01b738166f880344283a98189ccd7957, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b738166f880344283a98189ccd7957, type: 3}
 --- !u!1 &664279445
@@ -6048,7 +6040,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 3.9539e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -6141,11 +6133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5061e2643e615bb4d9d7f643f8e05b63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 601
+      value: 601.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5061e2643e615bb4d9d7f643f8e05b63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.04
+      value: -0.006
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5061e2643e615bb4d9d7f643f8e05b63, type: 3}
       propertyPath: m_LocalPosition.z
