@@ -11,11 +11,12 @@ public class PlayerController : MonoBehaviour
     public GameObject Obj;
     public ParticleSystem Attack;
     public Image Img;
-    public float Speed = 1f;
+    public float speed;
     public float Gravity = -9.81f;
-    public float Angle;
+    public float Angle, minMouseMovementX, minMouseMovementY, rotationSpeed;
     public float turnSmoothTime = 0.1f;
     public float turnSmoothVelocity = 0.5f;
+    public Vector2 screenCenter;
     float smooth = 5.0f;
     float tiltAngle = 60.0f;
     public bool Run=false;
@@ -28,21 +29,27 @@ public class PlayerController : MonoBehaviour
         Control = GetComponent<CharacterController>();
         Animation = GetComponent<Animator>();
         Attack = Obj.GetComponent<ParticleSystem>();
+        screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        float mouseMovementX = Input.mousePosition.x - screenCenter.x;
+        //float mouseMovementY = Input.mousePosition.y - screenCenter.y;
 
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-        movementDirection.Normalize();
+        transform.position += Input.GetAxis("Vertical") * transform.forward * speed * Time.deltaTime + Input.GetAxis("Horizontal") * transform.right * speed * Time.deltaTime;
 
-        transform.Translate(movementDirection * Speed * Time.deltaTime, Space.World);
+        if (mouseMovementX < -minMouseMovementX || mouseMovementX > minMouseMovementX)
+        {
+            transform.Rotate(new Vector3(0, rotationSpeed * mouseMovementX, 0));
+        }
 
-        transform.rotation = Quaternion.Slerp(Position.rotation, Position.rotation, Time.deltaTime);
+        //if (mouseMovementY < -minMouseMovementY || mouseMovementY > minMouseMovementY)
+        //{
+        //    transform.Rotate(new Vector3(0, 0, rotationSpeed * mouseMovementY));
+        //}
 
         //Magic Attack
         if (Input.GetKeyDown(KeyCode.Q))
@@ -90,7 +97,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.A))
         {
-            Animation.SetTrigger("Walk");
+            Animation.SetTrigger("Idle");
         }
         //Walk Back
         if (Input.GetKeyDown(KeyCode.D))
