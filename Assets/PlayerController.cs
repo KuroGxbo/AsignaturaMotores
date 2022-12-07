@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     float smooth = 5.0f;
     float tiltAngle = 60.0f;
     public bool Run=false;
+    private bool Walk = false;
 
     // Start is called before the first frame update
     void Start()
@@ -57,62 +58,34 @@ public class PlayerController : MonoBehaviour
             Attack.Stop();
         }
         //Walk Front
-        if (Input.GetKeyDown(KeyCode.W))
+        if (horizontalInput != 0 || verticalInput != 0)
         {
-            Run = true;
-           
-
-        }
-        if (Run) {
-            Animation.SetTrigger("Walk");
-        }
-
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            Animation.SetTrigger("Idle");
-        }
-        //Walk Back
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            
-            Animation.SetTrigger("Walk");
-        }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            Animation.SetTrigger("Idle");
-        }
-        //Walk Front
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            
-            Animation.SetTrigger("Walk");
-
-        }
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            Animation.SetTrigger("Walk");
-        }
-        //Walk Back
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            
-            Animation.SetTrigger("Walk");
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            Animation.SetTrigger("Idle");
-        }
-        //Run
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            Run = true;
-            //Animation.SetTrigger("Run");
-        }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+            Walk= true;
+            if (!Run)
+            {
+                Animation.SetTrigger("Walk");
+            }
+        }else
         {
             Run = false;
-            //Animation.SetTrigger("Run");
+            Walk= false;
+            Animation.SetTrigger("Idle");
         }
+        
+        //Run       
+        if (Walk)
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                Run = true;
+                Animation.SetTrigger("Run");
+            }else
+            {
+                Run = false;
+                Animation.SetTrigger("Walk");
+            }
+        }
+        
         //Punch
         if (Input.GetKeyDown(KeyCode.E))
         {
