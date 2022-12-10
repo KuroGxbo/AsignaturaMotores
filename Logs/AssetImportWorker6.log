@@ -1,23 +1,23 @@
 Using pre-set license
-Built from '2022.1/staging' branch; Version is '2022.1.23f1 (9636b062134a) revision 9844400'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'en' Physical Memory: 18370 MB
+Built from '2022.2/release' branch; Version is '2022.2.0f1 (35dcd44975df) revision 3529940'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit CoreSingleLanguage' Language: 'es' Physical Memory: 32389 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2022.1.23f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2022.2.0f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker6
 -projectPath
-C:/Users/gabri/OneDrive/Documentos/MaestriaVideJuegos/ActividadClase/AsignaturaMotores
+D:/Documentos/MaestriaVideJuegos/ActividadClase/AsignaturaMotores
 -logFile
 Logs/AssetImportWorker6.log
 -srvPort
-63570
-Successfully changed project path to: C:/Users/gabri/OneDrive/Documentos/MaestriaVideJuegos/ActividadClase/AsignaturaMotores
-C:/Users/gabri/OneDrive/Documentos/MaestriaVideJuegos/ActividadClase/AsignaturaMotores
+49675
+Successfully changed project path to: D:/Documentos/MaestriaVideJuegos/ActividadClase/AsignaturaMotores
+D:/Documentos/MaestriaVideJuegos/ActividadClase/AsignaturaMotores
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,320 +47,130 @@ C:/Users/gabri/OneDrive/Documentos/MaestriaVideJuegos/ActividadClase/AsignaturaM
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 172.80 ms, found 3 plugins.
+Player connection [39844] Host "[IP] 192.168.1.121 [Port] 0 [Flags] 2 [Guid] 988394271 [EditorId] 988394271 [Version] 1048832 [Id] WindowsEditor(7,gabrieldiaz94) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [39844] Host "[IP] 192.168.1.121 [Port] 0 [Flags] 2 [Guid] 988394271 [EditorId] 988394271 [Version] 1048832 [Id] WindowsEditor(7,gabrieldiaz94) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 7.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2022.1.23f1 (9636b062134a)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.1.23f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/gabri/OneDrive/Documentos/MaestriaVideJuegos/ActividadClase/AsignaturaMotores/Assets
+Initialize engine version: 2022.2.0f1 (35dcd44975df)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.2.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Documentos/MaestriaVideJuegos/ActividadClase/AsignaturaMotores/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: AMD Radeon(TM) Vega 8 Graphics (ID=0x15d8)
-    Vendor:   ATI
-    VRAM:     9185 MB
-    Driver:   31.0.12027.7000
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6009 MB
+    Driver:   31.0.15.2756
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.1.23f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.1.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.1.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56032
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.2.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.2.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.2.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56144
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.1.23f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.1.23f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.1.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.1.23f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.018876 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.0f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Registered in 0.011088 seconds.
+- Loaded All Assemblies, in  0.320 seconds
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 113.95 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.236 seconds
+- Finished resetting the current domain, in  0.225 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1237ms)
-		BeginReloadAssembly (153ms)
+	ReloadAssembly (189ms)
+		BeginReloadAssembly (73ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (874ms)
-			LoadAssemblies (150ms)
+			CreateAndSetChildDomain (1ms)
+		LoadAllAssembliesAndSetupDomain (0ms)
+			LoadAssemblies (71ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (189ms)
-				TypeCache.Initialize (188ms)
-					TypeCache.ScanAssembly (187ms)
-				ResolveRequiredComponents (1ms)
+			SetupTypeCache (123ms)
+				TypeCache.Initialize (122ms)
+					TypeCache.ScanAssembly (120ms)
+				ResolveRequiredComponents (0ms)
+		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (56ms)
-			SetupLoadedEditorAssemblies (537ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (174ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (99ms)
-				SetLoadedEditorAssemblies (15ms)
-				RefreshPlugins (114ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (224ms)
-				ProcessInitializeOnLoadMethodAttributes (82ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (5ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (122ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
-Platform modules already initialized, skipping
-Registering precompiled user dll's ...
-Registered in 0.010290 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\gabri\OneDrive\Documentos\MaestriaVideJuegos\ActividadClase\AsignaturaMotores\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\gabri\OneDrive\Documentos\MaestriaVideJuegos\ActividadClase\AsignaturaMotores\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.842 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1844ms)
-		BeginReloadAssembly (397ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (150ms)
-		EndReloadAssembly (1215ms)
-			LoadAssemblies (159ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (359ms)
-				TypeCache.Initialize (352ms)
-					TypeCache.ScanAssembly (347ms)
-				ResolveRequiredComponents (7ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (74ms)
-			SetupLoadedEditorAssemblies (566ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (34ms)
-				SetLoadedEditorAssemblies (11ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (131ms)
-				ProcessInitializeOnLoadAttributes (334ms)
-				ProcessInitializeOnLoadMethodAttributes (41ms)
-				AfterProcessingInitializeOnLoad (13ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
-Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3254 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (59.0 KB). Loaded Objects now: 3737.
-Memory consumption went from 0.50 GB to 0.50 GB.
-Total: 5.939800 ms (FindLiveObjects: 0.460400 ms CreateObjectMapping: 0.174300 ms MarkObjects: 5.150600 ms  DeleteObjects: 0.152700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 78411.765247 seconds.
-  path: Packages/com.unity.test-framework/UnityEditor.TestRunner/NUnitExtension/Attributes/TestPlayerBuildModifierAttribute.cs
-  artifactKey: Guid(dd57b1176859fc84e93586103d3b5f73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.test-framework/UnityEditor.TestRunner/NUnitExtension/Attributes/TestPlayerBuildModifierAttribute.cs using Guid(dd57b1176859fc84e93586103d3b5f73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60fa95db3878fe75e6d789bfe36267d3') in 0.039213 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 78.060028 seconds.
-  path: Assets/Prefabs/Player.prefab
-  artifactKey: Guid(3414fe2a4e3cd3c49baad10a2744290f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player.prefab using Guid(3414fe2a4e3cd3c49baad10a2744290f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59aa5b64ead04764f4c52e2c3ca873bf') in 0.259154 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009872 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\gabri\OneDrive\Documentos\MaestriaVideJuegos\ActividadClase\AsignaturaMotores\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\gabri\OneDrive\Documentos\MaestriaVideJuegos\ActividadClase\AsignaturaMotores\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\Documentos\MaestriaVideJuegos\ActividadClase\AsignaturaMotores\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Documentos\MaestriaVideJuegos\ActividadClase\AsignaturaMotores\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.464 seconds
+Refreshing native plugins compatible for Editor in 1.39 ms, found 3 plugins.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.44 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.800 seconds
+- Finished resetting the current domain, in  0.373 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1802ms)
-		BeginReloadAssembly (236ms)
+	ReloadAssembly (143ms)
+		BeginReloadAssembly (80ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (11ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (65ms)
-		EndReloadAssembly (1385ms)
-			LoadAssemblies (153ms)
+			CreateAndSetChildDomain (15ms)
+		LoadAllAssembliesAndSetupDomain (319ms)
+			LoadAssemblies (55ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (433ms)
-				TypeCache.Initialize (427ms)
-					TypeCache.ScanAssembly (418ms)
-				ResolveRequiredComponents (6ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (82ms)
-			SetupLoadedEditorAssemblies (620ms)
+			SetupTypeCache (298ms)
+				TypeCache.Initialize (154ms)
+					TypeCache.ScanAssembly (151ms)
+				ResolveRequiredComponents (3ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (263ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (47ms)
-				SetLoadedEditorAssemblies (15ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (127ms)
-				ProcessInitializeOnLoadAttributes (363ms)
-				ProcessInitializeOnLoadMethodAttributes (49ms)
-				AfterProcessingInitializeOnLoad (17ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (5ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (45ms)
+				ProcessInitializeOnLoadAttributes (183ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.24 ms, found 3 plugins.
+			AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.30 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3235 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 18 unused Assets / (25.4 KB). Loaded Objects now: 3748.
-Memory consumption went from 0.50 GB to 0.50 GB.
-Total: 4.986600 ms (FindLiveObjects: 0.442500 ms CreateObjectMapping: 0.221700 ms MarkObjects: 4.275600 ms  DeleteObjects: 0.044600 ms)
+Unloading 3298 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (67.9 KB). Loaded Objects now: 3783.
+Memory consumption went from 0.51 GB to 0.51 GB.
+Total: 2.336900 ms (FindLiveObjects: 0.253400 ms CreateObjectMapping: 0.152900 ms MarkObjects: 1.851300 ms  DeleteObjects: 0.078500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 113.058042 seconds.
-  path: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/AnimatorMessageListener@32x.png
-  artifactKey: Guid(9059e055aa673b3469a5c2896c0b8fb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/AnimatorMessageListener@32x.png using Guid(9059e055aa673b3469a5c2896c0b8fb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd7180024f4b7619a61143520c540e80') in 0.135638 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Quad Punch.fbm/bot color.jpg
-  artifactKey: Guid(b5626bb05b5467b408aff8da0b3f9165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Quad Punch.fbm/bot color.jpg using Guid(b5626bb05b5467b408aff8da0b3f9165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1621aa49a9c1bf07b0bcd1470896139') in 0.032316 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Idle.fbm/bot color.jpg
-  artifactKey: Guid(1f19f1db0e34379489996f103e023680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Idle.fbm/bot color.jpg using Guid(1f19f1db0e34379489996f103e023680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a00aa16f6010c91a7f42883aa16df66e') in 0.023908 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Standing 2H Magic Attack.fbm/bot color.jpg
-  artifactKey: Guid(9621ab45456f3b049ace469fd02af18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Standing 2H Magic Attack.fbm/bot color.jpg using Guid(9621ab45456f3b049ace469fd02af18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59c6a6806b994b5e5f46dcc63fc13ae6') in 0.027113 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Jump.fbm/BOdy Skin Base Color.png
-  artifactKey: Guid(b4bbe3751262a2a4da64b556d7dadfef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Jump.fbm/BOdy Skin Base Color.png using Guid(b4bbe3751262a2a4da64b556d7dadfef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a5ac6259cdf8cf797a63909743ab2f5') in 0.032021 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Assets Motores/Assets Motores/Textures/bark.png
-  artifactKey: Guid(3fb6f4be248e43949b529413b1d4dcbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Textures/bark.png using Guid(3fb6f4be248e43949b529413b1d4dcbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e54148daacdf8422bd25208fff76b219') in 0.049892 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Standing 2H Magic Attack.fbm/BOdy Skin Base Color.png
-  artifactKey: Guid(e351fef2debf72a46a17dd04d04c013c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Standing 2H Magic Attack.fbm/BOdy Skin Base Color.png using Guid(e351fef2debf72a46a17dd04d04c013c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd598e30238e44267d84420f6d8100ba7') in 0.027278 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Standing Magic Area Attack.fbm/BOdy Skin Base Color.png
-  artifactKey: Guid(8ca13e68687a0234c904720d46490c3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Standing Magic Area Attack.fbm/BOdy Skin Base Color.png using Guid(8ca13e68687a0234c904720d46490c3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7ee13a6b47b6183a99fa84eb3f4fbde') in 0.025632 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000071 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Standing 2H Magic Attack 2.fbm/BOdy Skin Base Color.png
-  artifactKey: Guid(c70bb86459f88ce4bb394859e9277b59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Standing 2H Magic Attack 2.fbm/BOdy Skin Base Color.png using Guid(c70bb86459f88ce4bb394859e9277b59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af9c01dd600c61610b1c3f32cc1df28a') in 0.027675 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Falling Idle.fbm/bot color.jpg
-  artifactKey: Guid(f6e0ca4454dff2643ac7884347a2b6d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Falling Idle.fbm/bot color.jpg using Guid(f6e0ca4454dff2643ac7884347a2b6d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26b5f9a24e70e8a09f894dcf3bacf1b8') in 0.032636 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Falling Idle.fbm/BOdy Skin Base Color.png
-  artifactKey: Guid(8a7d1448ed7ffc84193121eb2e4e665a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Falling Idle.fbm/BOdy Skin Base Color.png using Guid(8a7d1448ed7ffc84193121eb2e4e665a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7da60f96d24552d8914d1956f504f43d') in 0.032087 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/RunJump.fbm/bot color.jpg
-  artifactKey: Guid(a672eb7ffe8a1a749a751b7a98ca24fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/RunJump.fbm/bot color.jpg using Guid(a672eb7ffe8a1a749a751b7a98ca24fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcf10a736582506bf09c5588b17341e0') in 0.028178 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Assets Motores/Assets Motores/Textures/bark normal.png
-  artifactKey: Guid(e8f179b75e2a68340ba7aeca4514b2bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Textures/bark normal.png using Guid(e8f179b75e2a68340ba7aeca4514b2bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da7ce74e0e9505dec52ab991c61419f') in 0.063273 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Basic Motions Pack/Textures/BasicMotionsTexture.png
-  artifactKey: Guid(fad9765a35536374695ea4ff22aca373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Basic Motions Pack/Textures/BasicMotionsTexture.png using Guid(fad9765a35536374695ea4ff22aca373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1e97cdcb8037cce4b93237dba1a680f') in 0.031722 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000074 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/RunJump.fbm/BOdy Skin Base Color.png
-  artifactKey: Guid(bbe747a46cc702641b13068fec84d99d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/RunJump.fbm/BOdy Skin Base Color.png using Guid(bbe747a46cc702641b13068fec84d99d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '076d432d4fa60986e80edf515d5bd704') in 0.019477 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Standing Magic Area Attack.fbm/bot color.jpg
-  artifactKey: Guid(bfdaa2f7f0464f941a782b0d11c4e8d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Standing Magic Area Attack.fbm/bot color.jpg using Guid(bfdaa2f7f0464f941a782b0d11c4e8d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fd65c546d30fb0e040070e5c0f15ad1') in 0.034431 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Running.fbm/bot color.jpg
-  artifactKey: Guid(0f349aae3fd59804a87fc2c01503a71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Running.fbm/bot color.jpg using Guid(0f349aae3fd59804a87fc2c01503a71e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3587b3e5ecb7631084a7a10aa573d169') in 0.027846 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Standing React Death Backward.fbm/BOdy Skin Base Color.png
-  artifactKey: Guid(2ca88c515db15944f837a426c5d6cf5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Standing React Death Backward.fbm/BOdy Skin Base Color.png using Guid(2ca88c515db15944f837a426c5d6cf5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98d1ea7b4351eb65cdfcf538b6726094') in 0.027034 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/Assets Motores/Assets Motores/Girl/Running.fbm/BOdy Skin Base Color.png
-  artifactKey: Guid(406abcc4f37583f419f0d016e9c29b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets Motores/Assets Motores/Girl/Running.fbm/BOdy Skin Base Color.png using Guid(406abcc4f37583f419f0d016e9c29b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f98d6061b6bf50e11d89d34802ca61ad') in 0.034709 seconds 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: La operación de E/S se anuló por una salida de subproceso o por una solicitud de aplicación.
 AssetImportWorker is now disconnected from the server
 Process exiting
 Exiting without the bug reporter. Application will terminate with return code 0

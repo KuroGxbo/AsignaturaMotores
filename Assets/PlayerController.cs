@@ -12,10 +12,13 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem Attack;
     public Image Img;
     public float Speed = 1f;
+    public float RotationSpeed,jumpStrength;
+    public Vector3 VerticalSpeed;
     public float Gravity = -9.81f;
     public float Angle;
     public float turnSmoothTime = 0.1f;
     public float turnSmoothVelocity = 0.5f;
+    private float playerSpeed;
     float smooth = 5.0f;
     float tiltAngle = 60.0f;
     public bool Run=false;
@@ -26,7 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         Obj = GameObject.Find("Player");
         Position = Obj.transform;
-        Control = GetComponent<CharacterController>();
+ //       Control = GetComponent<CharacterController>();
         Animation = GetComponent<Animator>();
         Attack = Obj.GetComponent<ParticleSystem>();
 
@@ -37,75 +40,53 @@ public class PlayerController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-        movementDirection.Normalize();
-
-        transform.Translate(movementDirection * Speed * Time.deltaTime, Space.World);
-
-        transform.rotation = Quaternion.Slerp(Position.rotation, Position.rotation, Time.deltaTime);
-
-        //Magic Attack
+        if (Input.GetKeyDown(KeyCode.Space) && Control.isGrounded)
+        {
+            VerticalSpeed = jumpStrength * Vector3.up;
+            if (Animation.GetFloat("speed") > 5.1f)
+            {
+                Animation.SetBool("jumpinRun", true);
+            } else
+            {
+                Animation.SetBool("jumping", true);
+            }
+        } else if (Control.isGrounded)
+        {
+            Animation.SetBool("jumpinRun", false);
+            Animation.SetBool("jumping", false);
+        }
+        
         if (Input.GetKeyDown(KeyCode.Q))
         {
-
-            Animation.SetTrigger("Magic");
-            Attack.Play();
-        }
-        if (Input.GetKeyUp(KeyCode.Q))
-        {
-            Animation.SetTrigger("Idle");
-            Attack.Stop();
-        }
-        //Walk Front
-        if (horizontalInput != 0 || verticalInput != 0)
-        {
-            Walk= true;
-            if (!Run)
+            if(Animation.GetFloat("speed") < 0.1f)
             {
-                Animation.SetTrigger("Walk");
+                Animation.SetTrigger("attack");
             }
-        }else
-        {
-            Run = false;
-            Walk= false;
-            Animation.SetTrigger("Idle");
+            
         }
-        
-        //Run       
-        if (Walk)
-        {
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                Run = true;
-                Animation.SetTrigger("Run");
-            }else
-            {
-                Run = false;
-                Animation.SetTrigger("Walk");
-            }
-        }
-        
-        //Punch
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Animation.SetTrigger("Punch");
-        }
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            Animation.SetTrigger("Idle");
-        }
-        //Jump
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Animation.SetTrigger("Jump");
-        }
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            Animation.SetTrigger("Idle");
+            if (Animation.GetFloat("speed") < 0.1f)
+            {
+                Animation.SetTrigger("magic");
+            }
+
         }
 
+        VerticalSpeed += Physics.gravity * Gravity;
 
+        Vector3 horizontalSpeed = verticalInput * transform.forward * Speed;
 
+        transform.Rotate(new Vector3(0,RotationSpeed * horizontalInput, 0));
+        Control.Move((horizontalSpeed + VerticalSpeed) * Time.deltaTime);
+
+        playerSpeed = horizontalSpeed.magnitude;
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            playerSpeed *= 3;
+        }
+        Animation.SetFloat("speed",playerSpeed);
     }
+
 }
