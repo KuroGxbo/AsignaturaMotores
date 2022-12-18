@@ -7298,6 +7298,7 @@ MonoBehaviour:
   Img: {fileID: 0}
   Speed: 1
   RotationSpeed: 200
+  jumpStrength: 0
   VerticalSpeed: {x: 0, y: 0, z: 0}
   Gravity: 0.1
   Angle: 0
@@ -7850,7 +7851,7 @@ GameObject:
   - component: {fileID: 6684094478754976598}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7863,7 +7864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6684094478754976557}
   m_LocalRotation: {x: 0.19919686, y: 0, z: 0, w: 0.9799595}
-  m_LocalPosition: {x: 0.5300293, y: 2.42, z: -2.42}
+  m_LocalPosition: {x: -0.02, y: 2.34, z: -2.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
