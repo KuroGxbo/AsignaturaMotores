@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2541035775485028987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7813707210300195926}
+  m_Layer: 0
+  m_Name: Recta Edificios Larga
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7813707210300195926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2541035775485028987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 500.37033, y: -8.180838, z: 54.459366}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1977972161099832929}
+  - {fileID: 5607455202793948303}
+  - {fileID: 5607455202862979085}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1977972159845100709
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7813707210300195926}
+    m_Modifications:
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.20031738
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.360838
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.799366
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159029, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_Name
+      value: Recta Edificios (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+--- !u!4 &5607455202793948303 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+  m_PrefabInstance: {fileID: 1977972159845100709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1977972159922745383
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7813707210300195926}
+    m_Modifications:
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.26434326
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.350838
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -34.739365
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159029, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_Name
+      value: Recta Edificios (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+--- !u!4 &5607455202862979085 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+  m_PrefabInstance: {fileID: 1977972159922745383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5607455203837703755
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7813707210300195926}
+    m_Modifications:
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3277893
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.43781
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -49.7329
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6242699364748159029, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+      propertyPath: m_Name
+      value: Recta Edificios
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+--- !u!4 &1977972161099832929 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6242699364748159018, guid: 912e5159f3087e44094cb7203886a28c, type: 3}
+  m_PrefabInstance: {fileID: 5607455203837703755}
+  m_PrefabAsset: {fileID: 0}

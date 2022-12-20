@@ -11,6 +11,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject _QuitGame;
     [SerializeField] private GameObject _Panel;
     [SerializeField] private GameObject _Fondo;
+    [SerializeField] private GameObject _CoinScore;
+    [SerializeField] private GameObject _MainIcon;
+    [SerializeField] private GameObject _MainText;
     private string ActualScene;
     private float XPos;
     private float YPos;
@@ -24,6 +27,8 @@ public class PauseMenu : MonoBehaviour
     {
         _Fondo.SetActive(false);
         _Panel.SetActive(false);
+        _MainText.SetActive(false);
+        _MainIcon.SetActive(false);
         EstadoMenu = false;
         if (PlayerPrefs.GetFloat("X")!=0) {
             _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
@@ -45,12 +50,18 @@ public class PauseMenu : MonoBehaviour
             if (EstadoMenu) {
                 _Fondo.SetActive(true);
                 _Panel.SetActive(true);
+                _MainText.SetActive(true);
+                _MainIcon.SetActive(true);
+                _CoinScore.SetActive(false);
                 Pause();
                 
             }
             else {
                 _Fondo.SetActive(false);
                 _Panel.SetActive(false);
+                _CoinScore.SetActive(true);
+                _MainText.SetActive(false);
+                _MainIcon.SetActive(false);
                 Resume();
             }
         }
@@ -81,8 +92,9 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
+        Debug.Log("EntryMain");
         Resume();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
 
     public void QuitGame()
