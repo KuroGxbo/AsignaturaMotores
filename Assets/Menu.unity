@@ -634,7 +634,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397348738}
   m_LocalRotation: {x: -0.0005578128, y: 0.0043164315, z: 0.12816307, w: 0.9917436}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 6}
   m_LocalScale: {x: 1.5833, y: 1.5833, z: 1.5833}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -643,7 +643,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -0.127, y: 0.482, z: 14.727}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: -385, y: 175}
+=======
+  m_AnchoredPosition: {x: -766.42, y: 449.3}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &397348740
@@ -793,7 +797,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: -870, y: -452}
+=======
+  m_AnchoredPosition: {x: -1164, y: -622.5}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &402321260
@@ -992,6 +1000,7 @@ GameObject:
   - component: {fileID: 527949489}
   - component: {fileID: 527949488}
   - component: {fileID: 527949487}
+  - component: {fileID: 527949490}
   m_Layer: 5
   m_Name: Cargar
   m_TagString: Untagged
@@ -1018,7 +1027,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 665.37994, y: -325.1}
+=======
+  m_AnchoredPosition: {x: 999.3799, y: -533.5}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527949487
@@ -1064,7 +1077,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 527949488}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 527949490}
+        m_TargetAssemblyTypeName: LoadData, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &527949488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,6 +1128,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527949485}
   m_CullTransparentMesh: 1
+--- !u!114 &527949490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527949485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5caab68793cd549af5ebce3e97306b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &699889927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1211,7 +1248,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: -854, y: -344}
+=======
+  m_AnchoredPosition: {x: -1148, y: -508}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &780041308
@@ -2306,6 +2347,7 @@ GameObject:
   - component: {fileID: 1371639810}
   - component: {fileID: 1371639809}
   - component: {fileID: 1371639808}
+  - component: {fileID: 1371639811}
   m_Layer: 5
   m_Name: Inicio
   m_TagString: Untagged
@@ -2332,7 +2374,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 662, y: -197}
+=======
+  m_AnchoredPosition: {x: 996, y: -404}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1371639808
@@ -2378,7 +2424,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1371639809}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1371639811}
+        m_TargetAssemblyTypeName: StartScript, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1371639809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2417,6 +2475,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371639806}
   m_CullTransparentMesh: 1
+--- !u!114 &1371639811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371639806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fe49400efb48c45b6f2e259d575037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1401729988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,6 +2812,7 @@ GameObject:
   - component: {fileID: 1608612242}
   - component: {fileID: 1608612241}
   - component: {fileID: 1608612240}
+  - component: {fileID: 1608612243}
   m_Layer: 5
   m_Name: Ajustes
   m_TagString: Untagged
@@ -2768,7 +2839,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 665.37994, y: -466.67}
+=======
+  m_AnchoredPosition: {x: 1000, y: -661.5}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1608612240
@@ -2814,7 +2889,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1608612241}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1608612243}
+        m_TargetAssemblyTypeName: QuitButton, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: QuitGame
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1608612241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2853,6 +2940,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608612238}
   m_CullTransparentMesh: 1
+--- !u!114 &1608612243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608612238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0ff7f6c299c96428a462b789b97e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1663375087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2964,7 +3063,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: -674, y: -485}
+=======
+  m_AnchoredPosition: {x: -968, y: -641.4}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1671859936
@@ -3335,7 +3438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ajustes
+  m_text: Salir
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3584,7 +3687,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099509107}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 2.1933, y: 2.1933, z: 2.1933}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3593,7 +3696,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: -594, y: 325}
+=======
+  m_AnchoredPosition: {x: -993, y: 615}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2099509109

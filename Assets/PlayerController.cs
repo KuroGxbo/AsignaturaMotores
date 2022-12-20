@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public GameObject Obj;
     public ParticleSystem Attack;
     public Image Img;
-    public float Speed = 1f;
+    public float Speed = 25f;
     public float RotationSpeed,jumpStrength;
     public Vector3 VerticalSpeed;
     public float Gravity = -9.81f;
@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            playerSpeed *= 3;
+            playerSpeed *= 70f;
         }
         Animation.SetFloat("speed",playerSpeed);
     }

@@ -15,6 +15,22 @@ public class MenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            QuitGame();
+        }
+    }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+    void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
+
+    void QuitGame() {
+        Debug.Log("Salir");
+        Application.Quit();
     }
 }
