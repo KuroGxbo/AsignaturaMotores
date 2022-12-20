@@ -43,7 +43,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.9716981, g: 0.7991966, b: 0.068752214, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.10869551, a: 1}
   m_Intensity: 1
   m_Range: 2
   m_SpotAngle: 30
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 9008714575706861775}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: ring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
