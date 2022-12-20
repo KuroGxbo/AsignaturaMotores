@@ -5377,16 +5377,18 @@ MonoBehaviour:
   Control: {fileID: 4112533984729211730}
   Obj: {fileID: 0}
   Attack: {fileID: 0}
-  Img: {fileID: 0}
-  Speed: 5
+  SpeedRunning: 50
+  SpeedLab: 50
+  SpeedLv1: 50
   RotationSpeed: 2
-  jumpStrength: 20
-  Gravity: 0.1
+  jumpStrength: 500
+  Gravity: 100
   playerSpeed: 0
-  inputSpeed: 0
   movement: 0
   VerticalSpeed: {x: 0, y: 0, z: 0}
   horizontalSpeed: {x: 0, y: 0, z: 0}
   coinSound: {fileID: 8300000, guid: beb27a33393b5124aa9140a4677ea6f6, type: 3}
   source: {fileID: 7405711577532681252}
   sfxSource: {fileID: 1671190754911457705}
+  scoreText: {fileID: 0}
+  turn: {x: 0, y: 0}

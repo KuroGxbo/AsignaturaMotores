@@ -1149,12 +1149,16 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1398952977968327767, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+      propertyPath: Gravity
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398952977968327767, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1472416166}
     - target: {fileID: 1398952977968327767, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
       propertyPath: jumpStrength
-      value: 25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7479558977323964321, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
       propertyPath: m_RootOrder
@@ -3030,11 +3034,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1573193391 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7820337949866380571, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
-  m_PrefabInstance: {fileID: 548494114}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1574464428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4842,7 +4841,7 @@ PrefabInstance:
     - target: {fileID: 2229943036740823397, guid: 9fdc6c8dc8ba4294c8ff1a14ee4f4c37, type: 3}
       propertyPath: _Player
       value: 
-      objectReference: {fileID: 1573193391}
+      objectReference: {fileID: 0}
     - target: {fileID: 2229943036740823397, guid: 9fdc6c8dc8ba4294c8ff1a14ee4f4c37, type: 3}
       propertyPath: _MainTitle
       value: 

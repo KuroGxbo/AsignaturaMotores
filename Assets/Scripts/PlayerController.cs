@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public CharacterController Control;
     public GameObject Obj;
     public ParticleSystem Attack;
-    public float Speed = 1f,RotationSpeed, jumpStrength, Gravity = -9.81f, 
+    public float SpeedRunning,SpeedLab,SpeedLv1,RotationSpeed, jumpStrength, Gravity = -9.81f, 
         playerSpeed, movement;
     public Vector3 VerticalSpeed, horizontalSpeed;
     public AudioClip coinSound;
@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 turn;
     private Vector2 mousePos;
     private Vector3 screenPos;
+    private float Speed;
 
 
     // Start is called before the first frame update
@@ -33,7 +34,6 @@ public class PlayerController : MonoBehaviour
         //       Control = GetComponent<CharacterController>();
         Animation = GetComponent<Animator>();
         Attack = Obj.GetComponent<ParticleSystem>();
-        inputSpeed = Speed;
         Debug.Log("onCreate:" + SceneManager.GetActiveScene().name);
         scoreText.text = score.ToString();
         switch (SceneManager.GetActiveScene().name)
@@ -55,23 +55,23 @@ public class PlayerController : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "LevelRunner":
-                level1ForwardMovement();
+                level1ForwardMovement(SpeedRunning);
                 break;
             case "LevelLaberinth":
                 inputSpeed = 50;
-                level2ForwardMovement();
+                level2ForwardMovement(SpeedLab);
                 jump();
                 attackCommands();
                 rotationMouse();
                 break;
             case "Level1":
-                level2ForwardMovement();
+                level2ForwardMovement(SpeedLv1);
                 jumpL1();
                 attackCommands();
                 level2Rotation();
                 break;
             default:
-                level2ForwardMovement();
+                level2ForwardMovement(SpeedLv1);
                 jump();
                 attackCommands();
                 level2Rotation();
@@ -182,11 +182,9 @@ public class PlayerController : MonoBehaviour
         transform.RotateAround(Vector3.up, rotX);
     }
 
-    void level2ForwardMovement()
+    void level2ForwardMovement(float inputSpeed)
     {
         float verticalInput = Input.GetAxis("Vertical");
-        horizontalSpeed = verticalInput * transform.forward * Speed;
-
         playerSpeed = verticalInput*5;
 
         Speed = inputSpeed;
@@ -207,12 +205,12 @@ public class PlayerController : MonoBehaviour
         {
             Animation.SetBool("crouch", false);
         }
-
-        Control.Move((horizontalSpeed + VerticalSpeed) * Time.deltaTime);
+        horizontalSpeed = verticalInput * transform.forward;
+        Control.Move((horizontalSpeed + VerticalSpeed) * Speed * Time.deltaTime);
         Animation.SetFloat("speed", playerSpeed);
     }
 
-    void level1ForwardMovement()
+    void level1ForwardMovement(float inputSpeed)
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         if( horizontalInput < 0)
@@ -227,13 +225,12 @@ public class PlayerController : MonoBehaviour
         }
         Vector3 target = new Vector3(movement, transform.position.y, transform.position.z);
 
-        Speed = 10;
-        horizontalSpeed = transform.forward * Speed;
+        horizontalSpeed = transform.forward;
 
-        playerSpeed = horizontalSpeed.magnitude;
+        playerSpeed = 10;
 
         source.volume = 0.8f;
-        Control.Move((VerticalSpeed + horizontalSpeed) * Time.deltaTime);
+        Control.Move((VerticalSpeed + horizontalSpeed) * inputSpeed* Time.deltaTime);
         transform.position = Vector3.Lerp(transform.position, target, 50 * Time.deltaTime);
         Animation.SetFloat("speed", playerSpeed);
     }
