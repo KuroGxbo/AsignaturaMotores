@@ -5379,14 +5379,14 @@ MonoBehaviour:
   Attack: {fileID: 0}
   Img: {fileID: 0}
   Speed: 5
-  RotationSpeed: 2
-  jumpStrength: 20
-  Gravity: 0.1
-  playerSpeed: 0
-  inputSpeed: 0
-  movement: 0
+  RotationSpeed: 15
+  jumpStrength: 0
   VerticalSpeed: {x: 0, y: 0, z: 0}
-  horizontalSpeed: {x: 0, y: 0, z: 0}
+  Gravity: 0.1
+  Angle: 0
+  turnSmoothTime: 0.1
+  turnSmoothVelocity: 0.5
+  Run: 0
   coinSound: {fileID: 8300000, guid: beb27a33393b5124aa9140a4677ea6f6, type: 3}
   source: {fileID: 7405711577532681252}
   sfxSource: {fileID: 1671190754911457705}
