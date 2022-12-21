@@ -262,6 +262,7 @@ public class PlayerController : MonoBehaviour
         if (health < 0)
         {
             health = 0;
+            Animation.SetBool("died", true);
         }
         hearth.fillAmount = health / maxHealth;
     }
