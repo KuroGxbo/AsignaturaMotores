@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject _CoinScore;
     [SerializeField] private GameObject _MainIcon;
     [SerializeField] private GameObject _MainText;
+    public Image Key;
     private string ActualScene;
     private float XLab;
     private float YLab;
@@ -41,6 +43,7 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Key.fillAmount=0;
         _Fondo.SetActive(false);
         _Panel.SetActive(false);
         _MainText.SetActive(false);
@@ -53,12 +56,19 @@ public class PauseMenu : MonoBehaviour
                     _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XKeyLab"), PlayerPrefs.GetFloat("YKeyLab"), PlayerPrefs.GetFloat("ZKeyLab"));
                     CoinsLab = PlayerPrefs.GetInt("CoinsLab");
                     KeyForest = Convert.ToBoolean(PlayerPrefs.GetInt("KeyForest"));
+                    if (KeyForest)
+                    {
+                        Key.fillAmount = 1;
+                    }
                 }
                 if (PlayerPrefs.GetFloat("XLab") != 0)
                 {
                     _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XLab"), PlayerPrefs.GetFloat("YLab"), PlayerPrefs.GetFloat("ZLab"));
                     CoinsLab = PlayerPrefs.GetInt("CoinsLab");
                     KeyForest = Convert.ToBoolean(PlayerPrefs.GetInt("KeyForest"));
+                    if (KeyForest) {
+                        Key.fillAmount = 1;
+                    }
                 }
                 break;
             case 2:
@@ -84,6 +94,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             EstadoMenu = !EstadoMenu;
