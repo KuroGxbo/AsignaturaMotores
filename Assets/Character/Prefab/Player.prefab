@@ -369,9 +369,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5636819684903502301, guid: fbb1a29159e2ecb4c90d79d8e4248b57, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.06410024
+      objectReference: {fileID: 0}
+    - target: {fileID: -5636819684903502301, guid: fbb1a29159e2ecb4c90d79d8e4248b57, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.057973187
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fbb1a29159e2ecb4c90d79d8e4248b57, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420033347761576298, guid: fbb1a29159e2ecb4c90d79d8e4248b57, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.041654997
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420033347761576298, guid: fbb1a29159e2ecb4c90d79d8e4248b57, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0029113998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -435,7 +451,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 1.5
-  m_Radius: 1
+  m_Radius: 1.04
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.01
@@ -5376,15 +5392,17 @@ MonoBehaviour:
   Animation: {fileID: 0}
   Control: {fileID: 4112533984729211730}
   Obj: {fileID: 0}
+  hearth: {fileID: 0}
   Attack: {fileID: 0}
   SpeedRunning: 50
+  SpeedRunningVertical: 0
   SpeedLab: 50
   SpeedLv1: 50
   RotationSpeed: 2
   jumpStrength: 500
   Gravity: 100
   playerSpeed: 0
-  movement: 0
+  health: 0
   VerticalSpeed: {x: 0, y: 0, z: 0}
   horizontalSpeed: {x: 0, y: 0, z: 0}
   coinSound: {fileID: 8300000, guid: beb27a33393b5124aa9140a4677ea6f6, type: 3}

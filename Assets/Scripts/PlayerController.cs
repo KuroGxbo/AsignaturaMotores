@@ -11,19 +11,19 @@ public class PlayerController : MonoBehaviour
     public Animator Animation;
     public CharacterController Control;
     public GameObject Obj;
+    public Image hearth;
     public ParticleSystem Attack;
-    public float SpeedRunning,SpeedLab,SpeedLv1,RotationSpeed, jumpStrength, Gravity = -9.81f, 
-        playerSpeed, movement;
+    public float SpeedRunning, SpeedRunningVertical,SpeedLab,SpeedLv1,RotationSpeed, jumpStrength, Gravity = -9.81f, 
+        playerSpeed,health;
     public Vector3 VerticalSpeed, horizontalSpeed;
     public AudioClip coinSound;
     public AudioSource source, sfxSource;
     public TextMeshProUGUI scoreText;
     private int score = 0;
-    private float inputSpeed;
     public Vector2 turn;
-    private Vector2 mousePos;
-    private Vector3 screenPos;
     private float Speed;
+    private float movement = 500f;
+    private float maxHealth = 100f;
 
 
     // Start is called before the first frame update
@@ -35,17 +35,11 @@ public class PlayerController : MonoBehaviour
         Animation = GetComponent<Animator>();
         Attack = Obj.GetComponent<ParticleSystem>();
         Debug.Log("onCreate:" + SceneManager.GetActiveScene().name);
-        scoreText.text = score.ToString();
-        switch (SceneManager.GetActiveScene().name)
+        if (SceneManager.GetActiveScene().name != "Level1")
         {
-            case "LevelRunner":
-                break;
-            case "LevelLaberinth":
-                inputSpeed += 30;
-                break;
-            default:
-                break;
+            scoreText.text = score.ToString();
         }
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -56,9 +50,10 @@ public class PlayerController : MonoBehaviour
         {
             case "LevelRunner":
                 level1ForwardMovement(SpeedRunning);
+                slideCharacter();
+                jump();
                 break;
             case "LevelLaberinth":
-                inputSpeed = 50;
                 level2ForwardMovement(SpeedLab);
                 jump();
                 attackCommands();
@@ -66,7 +61,7 @@ public class PlayerController : MonoBehaviour
                 break;
             case "Level1":
                 level2ForwardMovement(SpeedLv1);
-                jumpL1();
+                jump();
                 attackCommands();
                 level2Rotation();
                 break;
@@ -95,55 +90,6 @@ public class PlayerController : MonoBehaviour
             }
         }
         else if (!Control.isGrounded)
-        {
-            Animation.SetBool("jumpinRun", false);
-            Animation.SetBool("jumping", false);
-        }
-    }
-
-    void jumpL1()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && Control.isGrounded)
-        {
-            VerticalSpeed = jumpStrength/2 * Vector3.up;
-            if (Animation.GetFloat("speed") > 5.1f)
-            {
-                Animation.SetBool("jumpinRun", true);
-            }
-            else
-            {
-                Animation.SetBool("jumping", true);
-            }
-        }
-        else if (!Control.isGrounded)
-        {
-            Animation.SetBool("jumpinRun", false);
-            Animation.SetBool("jumping", false);
-        }
-    }
-
-    void jumpLRunning(string tagString)
-    {
-        if (tagString == "isJump")
-        {
-            Debug.Log("jump");
-            if (Input.GetKey(KeyCode.Space) && Control.isGrounded)
-            {
-                VerticalSpeed = jumpStrength * Vector3.up;
-                if (Animation.GetFloat("speed") > 5.1f)
-                {
-                    Animation.SetBool("jumpinRun", true);
-                }
-                else
-                {
-                    Animation.SetBool("jumping", true);
-                }
-            } else if (!Control.isGrounded)
-            {
-                Animation.SetBool("jumpinRun", false);
-                Animation.SetBool("jumping", false);
-            }
-        }else
         {
             Animation.SetBool("jumpinRun", false);
             Animation.SetBool("jumping", false);
@@ -188,7 +134,7 @@ public class PlayerController : MonoBehaviour
         playerSpeed = verticalInput*5;
 
         Speed = inputSpeed;
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && verticalInput !=0)
         {
             Speed = inputSpeed * 2;
             playerSpeed = 10;
@@ -213,16 +159,22 @@ public class PlayerController : MonoBehaviour
     void level1ForwardMovement(float inputSpeed)
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        if( horizontalInput < 0)
+        if( horizontalInput > 0)
+        {
+            movement += 2.5f;
+        } else if (horizontalInput < 0)
+        {
+            movement -= 2.5f;
+        }
+
+        if(movement >= 502.5f)
         {
             movement = 502.5f;
-        } else if (horizontalInput > 0)
+        } else if(movement <= 495.0f)
         {
-            movement = 497.5f;
-        } else
-        {
-            movement = 500f;
+            movement = 495.0f;
         }
+
         Vector3 target = new Vector3(movement, transform.position.y, transform.position.z);
 
         horizontalSpeed = transform.forward;
@@ -231,9 +183,17 @@ public class PlayerController : MonoBehaviour
 
         source.volume = 0.8f;
         Control.Move((VerticalSpeed + horizontalSpeed) * inputSpeed* Time.deltaTime);
-        transform.position = Vector3.Lerp(transform.position, target, 50 * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, target, SpeedRunningVertical *  Time.deltaTime);
         Animation.SetFloat("speed", playerSpeed);
     }
+
+    void slideCharacter()
+    {
+        if( Input.GetKeyDown(KeyCode.LeftControl) )
+        {
+            Animation.SetTrigger("slide");
+        }
+    } 
 
     public void OnTriggerEnter(Collider other)
     {
@@ -243,7 +203,14 @@ public class PlayerController : MonoBehaviour
                 Destroy(other.gameObject);
                 score += 5;
                 sfxSource.PlayOneShot(coinSound);
-                scoreText.text = score.ToString();
+                if (SceneManager.GetActiveScene().name != "Level1")
+                {
+                    scoreText.text = score.ToString();
+                }
+                if(SceneManager.GetActiveScene().name == "Level1")
+                {
+                    IncreatHealth(5);
+                }
                 break;
             case "ringBlue":
                 Destroy(other.gameObject);
@@ -259,18 +226,55 @@ public class PlayerController : MonoBehaviour
                 break;
             default: break;
         }
-        if (other.gameObject.tag == "ring")
-        {
-            Destroy(other.gameObject);
-            score += 5;
-            sfxSource.PlayOneShot(coinSound);
-            scoreText.text = score.ToString();
-        }
-        jumpLRunning(other.gameObject.tag);
     }
 
-    public void OnTriggerStay(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        jumpLRunning(other.gameObject.tag);
+        if (collision.gameObject.tag == "building")
+        {
+            Debug.Log("block");
+            if (movement <= 497.5f)
+            {
+                movement = 497.5f;
+                Vector3 target = new Vector3(movement, transform.position.y, transform.position.z);
+                transform.position = Vector3.Lerp(transform.position, target, SpeedRunningVertical * Time.deltaTime);
+            }
+        }
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "building")
+        {
+            Debug.Log("block");
+            if (movement <= 497.5f)
+            {
+                movement = 497.5f;
+                Vector3 target = new Vector3(movement, transform.position.y, transform.position.z);
+                transform.position = Vector3.Lerp(transform.position, target, SpeedRunningVertical * Time.deltaTime);
+            }
+        }
+    }
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+
+        if (health < 0)
+        {
+            health = 0;
+        }
+        hearth.fillAmount = health / maxHealth;
+    }
+
+    public void IncreatHealth(float recover)
+    {
+        health += recover;
+
+        if (health >= 100)
+        {
+            health = 100;
+        }
+        hearth.fillAmount = health / maxHealth;
+    }
+
 }
