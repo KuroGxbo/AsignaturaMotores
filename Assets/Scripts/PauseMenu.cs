@@ -15,11 +15,27 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject _MainIcon;
     [SerializeField] private GameObject _MainText;
     private string ActualScene;
-    private float XPos;
-    private float YPos;
-    private float ZPos;
-    private int coins;
-    private bool key;
+    private float XLab;
+    private float YLab;
+    private float ZLab;
+
+    private float XFore;
+    private float YFore;
+    private float ZFore;
+
+    private float XRun;
+    private float YRun;
+    private float ZRun;
+
+    private float XKeyLab;
+    private float YKeyLab;
+    private float ZKeyLab;
+
+    private bool KeyForest;
+
+    private int CoinsRun;
+    private int CoinsForest;
+    private int CoinsLab;
     public bool EstadoMenu;
 
     // Start is called before the first frame update
@@ -30,33 +46,59 @@ public class PauseMenu : MonoBehaviour
         _MainText.SetActive(false);
         _MainIcon.SetActive(false);
         EstadoMenu = false;
-        if (PlayerPrefs.GetFloat("X")!=0) {
-            _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z"));
-
-            PlayerPrefs.GetInt("Coins");
-            PlayerPrefs.GetInt("Key");
+        switch (SceneManager.loadedSceneCount)
+        {
+            case 1:
+                if (PlayerPrefs.GetFloat("XKeyLab")!=0) {
+                    _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XKeyLab"), PlayerPrefs.GetFloat("YKeyLab"), PlayerPrefs.GetFloat("ZKeyLab"));
+                    CoinsLab = PlayerPrefs.GetInt("CoinsLab");
+                    KeyForest = Convert.ToBoolean(PlayerPrefs.GetInt("KeyForest"));
+                }
+                if (PlayerPrefs.GetFloat("XLab") != 0)
+                {
+                    _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XLab"), PlayerPrefs.GetFloat("YLab"), PlayerPrefs.GetFloat("ZLab"));
+                    CoinsLab = PlayerPrefs.GetInt("CoinsLab");
+                    KeyForest = Convert.ToBoolean(PlayerPrefs.GetInt("KeyForest"));
+                }
+                break;
+            case 2:
+                if (PlayerPrefs.GetFloat("XFore") != 0)
+                {
+                    _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XKeyLab"), PlayerPrefs.GetFloat("YFore"), PlayerPrefs.GetFloat("ZFore"));
+                    CoinsForest = PlayerPrefs.GetInt("CoinsForest");
+                }
+                break;
+            case 3:
+                if (PlayerPrefs.GetFloat("XRun") != 0)
+                {
+                    _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XRun"), PlayerPrefs.GetFloat("YRun"), PlayerPrefs.GetFloat("ZRun"));
+                    CoinsRun = PlayerPrefs.GetInt("CoinsRun");
+                }
+                break;
+            default:
+                break;
         }
-        if (PlayerPrefs.GetFloat("TpX")!=0) {
-            _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("TpX"), PlayerPrefs.GetFloat("TpY"), PlayerPrefs.GetFloat("TpZ"));
-            key = true;
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             EstadoMenu = !EstadoMenu;
-            if (EstadoMenu) {
+            if (EstadoMenu)
+            {
                 _Fondo.SetActive(true);
                 _Panel.SetActive(true);
                 _MainText.SetActive(true);
                 _MainIcon.SetActive(true);
                 _CoinScore.SetActive(false);
                 Pause();
-                
+
             }
-            else {
+            else
+            {
                 _Fondo.SetActive(false);
                 _Panel.SetActive(false);
                 _CoinScore.SetActive(true);
@@ -67,26 +109,63 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void SaveProgress() {
-        ActualScene=SceneManager.GetActiveScene().name;
-        XPos =_Player.transform.position.x;
-        YPos = _Player.transform.position.y;
-        ZPos = _Player.transform.position.z;
-        coins = 0;
-        var keystatus = Convert.ToInt32(key);
-        PlayerPrefs.SetString("Escena",ActualScene);
-        PlayerPrefs.SetFloat("X",XPos);
-        PlayerPrefs.SetFloat("Y",YPos);
-        PlayerPrefs.SetFloat("Z",ZPos);
-        PlayerPrefs.SetInt("Coins",coins);
-        PlayerPrefs.SetInt("Key",keystatus);
-        PlayerPrefs.Save();
-        Debug.Log(PlayerPrefs.GetString("Escena"));
-        Debug.Log(PlayerPrefs.GetFloat("X"));
-        Debug.Log(PlayerPrefs.GetFloat("Y"));
-        Debug.Log(PlayerPrefs.GetFloat("Z"));
-        Debug.Log(PlayerPrefs.GetInt("Coins"));
-        Debug.Log(PlayerPrefs.GetInt("Key"));
+    public void SaveProgress()
+    {
+        ActualScene = SceneManager.GetActiveScene().name;
+        
+        switch (SceneManager.loadedSceneCount)
+        {
+            case 1:
+                PlayerPrefs.DeleteAll();
+                PlayerPrefs.SetString("Escena", ActualScene);
+                PlayerPrefs.SetFloat("XLab", _Player.transform.position.x);
+                PlayerPrefs.SetFloat("YLab", _Player.transform.position.y);
+                PlayerPrefs.SetFloat("ZLab", _Player.transform.position.z);
+                PlayerPrefs.SetInt("CoinsLab", CoinsLab);
+                PlayerPrefs.SetInt("KeyForest", Convert.ToInt32(KeyForest));
+                PlayerPrefs.Save();
+                Debug.Log(PlayerPrefs.GetString("Escena"));
+                Debug.Log(PlayerPrefs.GetFloat("XLab"));
+                Debug.Log(PlayerPrefs.GetFloat("YLab"));
+                Debug.Log(PlayerPrefs.GetFloat("ZLab"));
+                Debug.Log(PlayerPrefs.GetInt("CoinsLab"));
+                Debug.Log(PlayerPrefs.GetInt("KeyForest"));
+                break;
+            case 2:
+                PlayerPrefs.DeleteAll();
+                PlayerPrefs.SetString("Escena", ActualScene);
+                PlayerPrefs.SetFloat("XFore", _Player.transform.position.x);
+                PlayerPrefs.SetFloat("YFore", _Player.transform.position.y);
+                PlayerPrefs.SetFloat("ZFore", _Player.transform.position.z);
+                PlayerPrefs.SetInt("CoinsForest", CoinsForest);
+                PlayerPrefs.SetInt("KeyForest", Convert.ToInt32(KeyForest));
+                PlayerPrefs.Save();
+                Debug.Log(PlayerPrefs.GetString("Escena"));
+                Debug.Log(PlayerPrefs.GetFloat("XFore"));
+                Debug.Log(PlayerPrefs.GetFloat("YFore"));
+                Debug.Log(PlayerPrefs.GetFloat("ZFore"));
+                Debug.Log(PlayerPrefs.GetInt("CoinsForest"));
+                Debug.Log(PlayerPrefs.GetInt("KeyForest"));
+                break;
+            case 3:
+                PlayerPrefs.DeleteAll();
+                PlayerPrefs.SetString("Escena", ActualScene);
+                PlayerPrefs.SetFloat("XRun", _Player.transform.position.x);
+                PlayerPrefs.SetFloat("YRun", _Player.transform.position.y);
+                PlayerPrefs.SetFloat("ZRun", _Player.transform.position.z);
+                PlayerPrefs.SetInt("CoinsRun", CoinsRun);
+                PlayerPrefs.Save();
+                Debug.Log(PlayerPrefs.GetString("Escena"));
+                Debug.Log(PlayerPrefs.GetFloat("XRun"));
+                Debug.Log(PlayerPrefs.GetFloat("YRun"));
+                Debug.Log(PlayerPrefs.GetFloat("ZRun"));
+                Debug.Log(PlayerPrefs.GetInt("CoinsRun"));
+                break;
+            default:
+                break;
+        }
+
+        
 
     }
 
@@ -103,10 +182,12 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void Pause() {
+    public void Pause()
+    {
         Time.timeScale = 0f;
     }
-    public void Resume() {
+    public void Resume()
+    {
         Time.timeScale = 1f;
     }
 }

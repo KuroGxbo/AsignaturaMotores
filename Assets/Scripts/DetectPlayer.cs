@@ -12,7 +12,9 @@ public class DetectPlayer : MonoBehaviour
     {
         var distance = Vector3.Distance(_Player.transform.position,this.transform.position);
         if (distance<35) {
+
             SceneManager.LoadScene(2);
+
         }
     }
 }

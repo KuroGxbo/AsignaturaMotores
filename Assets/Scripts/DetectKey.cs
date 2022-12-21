@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class detectfinal : MonoBehaviour
+public class DetectKey : MonoBehaviour
 {
     [SerializeField] private GameObject _Player;
 
@@ -11,9 +11,16 @@ public class detectfinal : MonoBehaviour
     void Update()
     {
         var distance = Vector3.Distance(_Player.transform.position, this.transform.position);
-        if (distance < 58)
+        if (distance < 5)
         {
-            SceneManager.LoadScene(3);
+            PlayerPrefs.SetFloat("XKeyLab", 823.5f);
+            PlayerPrefs.SetFloat("YKeyLab", 0.39999f);
+            PlayerPrefs.SetFloat("ZKeyLab", 870.3f);
+            PlayerPrefs.SetInt("KeyForest", 1);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene(1);
+
+
         }
     }
 }
