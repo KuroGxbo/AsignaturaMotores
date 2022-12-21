@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Barriles : MonoBehaviour
 {
-    public GameObject FilaBarriles;
-    int playerPositionZ;
+    public GameObject filaBarriles;
+    public float posicionZ;
     
     // Start is called before the first frame update
     void Start()
@@ -16,12 +16,13 @@ public class Barriles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        // en proceso playerPositionZ = 
 
-        if (playerPositionZ == 100)
+        posicionZ = filaBarriles.transform.position.z;
+
+        if (posicionZ < 125)
         {
-            Instantiate(FilaBarriles, FilaBarriles.transform.position, FilaBarriles.transform.rotation);
+            Destroy(gameObject);
         }
+        
     }
 }

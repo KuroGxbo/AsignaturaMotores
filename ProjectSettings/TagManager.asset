@@ -8,6 +8,7 @@ TagManager:
   - isJump
   - ringBlue
   - ringRed
+  - Obstacle
   layers:
   - Default
   - TransparentFX

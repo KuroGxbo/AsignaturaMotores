@@ -10,11 +10,11 @@ public class PlayerController : MonoBehaviour
     public Transform Position;
     public Animator Animation;
     public CharacterController Control;
-    public GameObject Obj;
+    public GameObject Obj, filaBarriles1, filaBarriles2, filaBarriles3, filaBarriles4, filaBarriles5;
     public Image hearth;
     public ParticleSystem Attack;
     public float SpeedRunning, SpeedRunningVertical,SpeedLab,SpeedLv1,RotationSpeed, jumpStrength, Gravity = -9.81f, 
-        playerSpeed,health;
+        playerSpeed,health, playerPositionZ;
     public Vector3 VerticalSpeed, horizontalSpeed;
     public AudioClip coinSound;
     public AudioSource source, sfxSource;
@@ -24,6 +24,9 @@ public class PlayerController : MonoBehaviour
     private float Speed;
     private float movement = 500f;
     private float maxHealth = 100f;
+    private bool barrilesCreados = false;
+   
+
 
 
     // Start is called before the first frame update
@@ -52,6 +55,7 @@ public class PlayerController : MonoBehaviour
                 level1ForwardMovement(SpeedRunning);
                 slideCharacter();
                 jump();
+                BarrelCreation();
                 break;
             case "LevelLaberinth":
                 level2ForwardMovement(SpeedLab);
@@ -240,6 +244,12 @@ public class PlayerController : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position, target, SpeedRunningVertical * Time.deltaTime);
             }
         }
+
+        else if (collision.gameObject.tag == "Obstacle")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
     }
 
     private void OnCollisionStay(Collision collision)
@@ -277,5 +287,22 @@ public class PlayerController : MonoBehaviour
         }
         hearth.fillAmount = health / maxHealth;
     }
+
+    void BarrelCreation()
+    {
+        playerPositionZ = GameObject.Find("Player").transform.position.z;
+
+        if (playerPositionZ > 100.00 && barrilesCreados == false)
+        {
+            Instantiate(filaBarriles1, filaBarriles1.transform.position, Quaternion.identity);
+            Instantiate(filaBarriles2, filaBarriles2.transform.position, Quaternion.identity);
+            Instantiate(filaBarriles3, filaBarriles3.transform.position, Quaternion.identity);
+            Instantiate(filaBarriles4, filaBarriles4.transform.position, Quaternion.identity);
+            Instantiate(filaBarriles5, filaBarriles5.transform.position, Quaternion.identity);
+            barrilesCreados = true;
+        }
+    }
+
+   
 
 }
