@@ -52,7 +52,7 @@ public class PauseMenu : MonoBehaviour
         switch (SceneManager.loadedSceneCount)
         {
             case 1:
-                if (PlayerPrefs.GetFloat("XKeyLab")!=0) {
+                if (PlayerPrefs.HasKey("XKeyLab")) {
                     _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XKeyLab"), PlayerPrefs.GetFloat("YKeyLab"), PlayerPrefs.GetFloat("ZKeyLab"));
                     CoinsLab = PlayerPrefs.GetInt("CoinsLab");
                     KeyForest = Convert.ToBoolean(PlayerPrefs.GetInt("KeyForest"));
@@ -61,7 +61,7 @@ public class PauseMenu : MonoBehaviour
                         Key.fillAmount = 1;
                     }
                 }
-                if (PlayerPrefs.GetFloat("XLab") != 0)
+                if (PlayerPrefs.HasKey("XLab"))
                 {
                     _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XLab"), PlayerPrefs.GetFloat("YLab"), PlayerPrefs.GetFloat("ZLab"));
                     CoinsLab = PlayerPrefs.GetInt("CoinsLab");
@@ -72,14 +72,14 @@ public class PauseMenu : MonoBehaviour
                 }
                 break;
             case 2:
-                if (PlayerPrefs.GetFloat("XFore") != 0)
+                if (PlayerPrefs.HasKey("XFore"))
                 {
                     _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XKeyLab"), PlayerPrefs.GetFloat("YFore"), PlayerPrefs.GetFloat("ZFore"));
                     CoinsForest = PlayerPrefs.GetInt("CoinsForest");
                 }
                 break;
             case 3:
-                if (PlayerPrefs.GetFloat("XRun") != 0)
+                if (PlayerPrefs.HasKey("XRun"))
                 {
                     _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XRun"), PlayerPrefs.GetFloat("YRun"), PlayerPrefs.GetFloat("ZRun"));
                     CoinsRun = PlayerPrefs.GetInt("CoinsRun");
