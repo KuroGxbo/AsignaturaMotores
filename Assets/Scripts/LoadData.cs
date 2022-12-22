@@ -7,8 +7,7 @@ public class LoadData : MonoBehaviour
 {
    
     public void LoadLevel() {
-        SceneManager.LoadScene(PlayerPrefs.GetString("Escena"));
         Debug.Log(PlayerPrefs.GetString("Escena"));
-
+        SceneManager.LoadScene(PlayerPrefs.GetString("Escena"));
     }
 }

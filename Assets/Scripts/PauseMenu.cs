@@ -14,8 +14,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject _Panel;
     [SerializeField] private GameObject _Fondo;
     [SerializeField] private GameObject _CoinScore;
-    [SerializeField] private GameObject _MainIcon;
-    [SerializeField] private GameObject _MainText;
+    [SerializeField] private GameObject _PauseText;
+    [SerializeField] private GameObject _HealthBar;
     public Image Key;
     public TextMeshProUGUI Objetivo;
     public TextMeshProUGUI Mensaje;
@@ -46,16 +46,19 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.DeleteAll();
         _Fondo.SetActive(false);
         _Panel.SetActive(false);
-        _MainText.SetActive(false);
-        _MainIcon.SetActive(false);
+        _PauseText.SetActive(false);
         Key.fillAmount = 0;
         _Fondo.SetActive(false);
+        _HealthBar.SetActive(true);
         _Panel.SetActive(false);
-        _MainText.SetActive(false);
-        _MainIcon.SetActive(false);
         EstadoMenu = false;
+        if(SceneManager.GetActiveScene().name == "Level1")
+        {
+            _CoinScore.SetActive(false);
+        }
         switch (SceneManager.loadedSceneCount)
         {
             case 1:
@@ -113,9 +116,9 @@ public class PauseMenu : MonoBehaviour
             {
                 _Fondo.SetActive(true);
                 _Panel.SetActive(true);
-                _MainText.SetActive(true);
-                _MainIcon.SetActive(true);
+                _PauseText.SetActive(true);
                 _CoinScore.SetActive(false);
+                _HealthBar.SetActive(false);
                 Pause();
 
             }
@@ -123,9 +126,16 @@ public class PauseMenu : MonoBehaviour
             {
                 _Fondo.SetActive(false);
                 _Panel.SetActive(false);
-                _CoinScore.SetActive(true);
-                _MainText.SetActive(false);
-                _MainIcon.SetActive(false);
+                _PauseText.SetActive(false);
+                _HealthBar.SetActive(true);
+                if (SceneManager.GetActiveScene().name == "Level1")
+                {
+                    _CoinScore.SetActive(false);
+                }
+                else
+                {
+                   _CoinScore.SetActive(true);
+                }
                 Resume();
             }
         }

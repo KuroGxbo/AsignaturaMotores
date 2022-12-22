@@ -13,19 +13,21 @@ public class PlayerController : MonoBehaviour
     public GameObject Obj, filaBarriles1, filaBarriles2, filaBarriles3, filaBarriles4, filaBarriles5;
     public Image hearth;
     public ParticleSystem Attack;
-    public float SpeedRunning, SpeedRunningVertical,SpeedLab,SpeedLv1,RotationSpeed, jumpStrength, Gravity = -9.81f, 
-        playerSpeed,health, playerPositionZ;
+    public float SpeedRunning, SpeedRunningVertical, SpeedLab, SpeedLv1, RotationSpeed, jumpStrength, Gravity = -9.81f,
+        playerSpeed, health, playerPositionZ;
     public Vector3 VerticalSpeed, horizontalSpeed;
     public AudioClip coinSound;
     public AudioSource source, sfxSource;
     public TextMeshProUGUI scoreText;
-    private int score = 0;
+    public int score = 0;
     public Vector2 turn;
+    public PauseMenu menu;
     private float Speed;
     private float movement = 500f;
     private float maxHealth = 100f;
     private bool barrilesCreados = false;
-   
+    private bool keyPressed = false;
+
 
 
 
@@ -42,6 +44,13 @@ public class PlayerController : MonoBehaviour
         {
             scoreText.text = score.ToString();
         }
+        score = 0;
+        if (PlayerPrefs.HasKey("Coins"))
+        {
+            Debug.Log("Coins Char" + PlayerPrefs.GetInt("Coins"));
+            score = PlayerPrefs.GetInt("Coins", 0);
+            scoreText.text = score.ToString();
+        }
         health = maxHealth;
     }
 
@@ -49,34 +58,39 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         VerticalSpeed += Physics.gravity * Gravity;
-        switch (SceneManager.GetActiveScene().name)
+        if (!menu.EstadoMenu)
         {
-            case "LevelRunner":
-                level1ForwardMovement(SpeedRunning);
-                slideCharacter();
-                jump();
-                BarrelCreation();
-                break;
-            case "LevelLaberinth":
-                level2ForwardMovement(SpeedLab);
-                jump();
-                attackCommands();
-                rotationMouse();
-                break;
-            case "Level1":
-                level2ForwardMovement(SpeedLv1);
-                jump();
-                attackCommands();
-                level2Rotation();
-                break;
-            default:
-                level2ForwardMovement(SpeedLv1);
-                jump();
-                attackCommands();
-                level2Rotation();
-                break;
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "LevelRunner":
+                    level1ForwardMovement(SpeedRunning);
+                    slideCharacter();
+                    jump();
+                    BarrelCreation();
+                    break;
+                case "LevelLaberinth":
+                    level2ForwardMovement(SpeedLab);
+                    jump();
+                    attackCommands();
+                    rotationMouse();
+                    break;
+                case "Level1":
+                    level2ForwardMovement(SpeedLv1);
+                    jump();
+                    attackCommands();
+                    level2Rotation();
+                    break;
+                default:
+                    level2ForwardMovement(SpeedLv1);
+                    jump();
+                    attackCommands();
+                    level2Rotation();
+                    break;
+            }
+        } else
+        {
+            Animation.SetFloat("speed", 0f);
         }
-        
     }
 
     void jump()
@@ -135,10 +149,10 @@ public class PlayerController : MonoBehaviour
     void level2ForwardMovement(float inputSpeed)
     {
         float verticalInput = Input.GetAxis("Vertical");
-        playerSpeed = verticalInput*5;
+        playerSpeed = Mathf.Abs(verticalInput * 5);
 
         Speed = inputSpeed;
-        if (Input.GetKey(KeyCode.LeftShift) && verticalInput !=0)
+        if (Input.GetKey(KeyCode.LeftShift) && verticalInput != 0)
         {
             Speed = inputSpeed * 2;
             playerSpeed = 10;
@@ -147,7 +161,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl))
         {
 
-            Speed = inputSpeed /2;
+            Speed = inputSpeed / 2;
             playerSpeed = 1;
             Animation.SetBool("crouch", true);
         }
@@ -163,20 +177,29 @@ public class PlayerController : MonoBehaviour
     void level1ForwardMovement(float inputSpeed)
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        if( horizontalInput > 0)
+        if (horizontalInput > 0 && !keyPressed)
         {
+            keyPressed = true;
             movement += 2.5f;
-        } else if (horizontalInput < 0)
+        }
+        else if (horizontalInput < 0 && !keyPressed)
         {
+            keyPressed = true;
             movement -= 2.5f;
         }
 
-        if(movement >= 502.5f)
+        if (horizontalInput == 0 && keyPressed)
+        {
+            keyPressed = false;
+        }
+
+        if (movement >= 502.5f)
         {
             movement = 502.5f;
-        } else if(movement <= 495.0f)
+        }
+        else if (movement <= 497.5f)
         {
-            movement = 495.0f;
+            movement = 497.5f;
         }
 
         Vector3 target = new Vector3(movement, transform.position.y, transform.position.z);
@@ -186,18 +209,18 @@ public class PlayerController : MonoBehaviour
         playerSpeed = 10;
 
         source.volume = 0.8f;
-        Control.Move((VerticalSpeed + horizontalSpeed) * inputSpeed* Time.deltaTime);
-        transform.position = Vector3.Lerp(transform.position, target, SpeedRunningVertical *  Time.deltaTime);
+        Control.Move((VerticalSpeed + horizontalSpeed) * inputSpeed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, target, SpeedRunningVertical * Time.deltaTime);
         Animation.SetFloat("speed", playerSpeed);
     }
 
     void slideCharacter()
     {
-        if( Input.GetKeyDown(KeyCode.LeftControl) )
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             Animation.SetTrigger("slide");
         }
-    } 
+    }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -211,7 +234,7 @@ public class PlayerController : MonoBehaviour
                 {
                     scoreText.text = score.ToString();
                 }
-                if(SceneManager.GetActiveScene().name == "Level1")
+                if (SceneManager.GetActiveScene().name == "Level1")
                 {
                     IncreatHealth(5);
                 }
@@ -303,6 +326,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   
+
 
 }
