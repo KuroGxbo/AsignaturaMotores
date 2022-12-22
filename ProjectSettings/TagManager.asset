@@ -9,6 +9,8 @@ TagManager:
   - ringBlue
   - ringRed
   - Obstacle
+  - Key
+  - KeyImage
   layers:
   - Default
   - TransparentFX

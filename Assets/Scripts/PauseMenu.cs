@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -16,6 +17,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject _MainIcon;
     [SerializeField] private GameObject _MainText;
     public Image Key;
+    public TextMeshProUGUI Objetivo;
+    public TextMeshProUGUI Mensaje;
     private string ActualScene;
     private float XLab;
     private float YLab;
@@ -43,7 +46,11 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Key.fillAmount=0;
+        _Fondo.SetActive(false);
+        _Panel.SetActive(false);
+        _MainText.SetActive(false);
+        _MainIcon.SetActive(false);
+        Key.fillAmount = 0;
         _Fondo.SetActive(false);
         _Panel.SetActive(false);
         _MainText.SetActive(false);
@@ -53,35 +60,39 @@ public class PauseMenu : MonoBehaviour
         {
             case 1:
                 if (PlayerPrefs.HasKey("XKeyLab")) {
-                    _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XKeyLab"), PlayerPrefs.GetFloat("YKeyLab"), PlayerPrefs.GetFloat("ZKeyLab"));
+                    _Player.transform.position.Set(PlayerPrefs.GetFloat("XKeyLab"), PlayerPrefs.GetFloat("YKeyLab"), PlayerPrefs.GetFloat("ZKeyLab"));
                     CoinsLab = PlayerPrefs.GetInt("CoinsLab");
                     KeyForest = Convert.ToBoolean(PlayerPrefs.GetInt("KeyForest"));
                     if (KeyForest)
                     {
                         Key.fillAmount = 1;
+                        Objetivo.SetText(String.Empty);
+                        Mensaje.SetText(String.Empty);
                     }
                 }
                 if (PlayerPrefs.HasKey("XLab"))
                 {
-                    _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XLab"), PlayerPrefs.GetFloat("YLab"), PlayerPrefs.GetFloat("ZLab"));
+                    _Player.transform.position.Set(PlayerPrefs.GetFloat("XLab"), PlayerPrefs.GetFloat("YLab"), PlayerPrefs.GetFloat("ZLab"));
                     CoinsLab = PlayerPrefs.GetInt("CoinsLab");
                     KeyForest = Convert.ToBoolean(PlayerPrefs.GetInt("KeyForest"));
                     if (KeyForest) {
                         Key.fillAmount = 1;
+                        Objetivo.SetText(String.Empty);
+                        Mensaje.SetText(String.Empty);
                     }
                 }
                 break;
             case 2:
                 if (PlayerPrefs.HasKey("XFore"))
                 {
-                    _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XKeyLab"), PlayerPrefs.GetFloat("YFore"), PlayerPrefs.GetFloat("ZFore"));
+                    _Player.transform.position.Set(PlayerPrefs.GetFloat("XKeyLab"), PlayerPrefs.GetFloat("YFore"), PlayerPrefs.GetFloat("ZFore"));
                     CoinsForest = PlayerPrefs.GetInt("CoinsForest");
                 }
                 break;
             case 3:
                 if (PlayerPrefs.HasKey("XRun"))
                 {
-                    _Player.transform.position = new Vector3(PlayerPrefs.GetFloat("XRun"), PlayerPrefs.GetFloat("YRun"), PlayerPrefs.GetFloat("ZRun"));
+                    _Player.transform.position.Set(PlayerPrefs.GetFloat("XRun"), PlayerPrefs.GetFloat("YRun"), PlayerPrefs.GetFloat("ZRun"));
                     CoinsRun = PlayerPrefs.GetInt("CoinsRun");
                 }
                 break;
@@ -196,6 +207,7 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         Time.timeScale = 0f;
+
     }
     public void Resume()
     {

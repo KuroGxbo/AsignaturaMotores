@@ -2131,6 +2131,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2229943036740823397, guid: 9fdc6c8dc8ba4294c8ff1a14ee4f4c37, type: 3}
+      propertyPath: _Player
+      value: 
+      objectReference: {fileID: 969694240}
+    - target: {fileID: 2229943036740823397, guid: 9fdc6c8dc8ba4294c8ff1a14ee4f4c37, type: 3}
+      propertyPath: _CoinScore
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2229943036740823400, guid: 9fdc6c8dc8ba4294c8ff1a14ee4f4c37, type: 3}
       propertyPath: m_Name
       value: MenuPausa 1
@@ -2664,24 +2672,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5192558175810050124, guid: c3d1992e448581347b0dd3748f620e97, type: 3}
   m_PrefabInstance: {fileID: 676609483}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &749404191 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6678140300676907593, guid: 5a7b6a8dd218aea4b9d5998ee7026866, type: 3}
-  m_PrefabInstance: {fileID: 6678140301928306892}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &749404196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749404191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fde13fc632ac554581dc9d218a27eed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _Player: {fileID: 0}
 --- !u!1001 &754805917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5002,9 +4992,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6678140300676907593, guid: 5a7b6a8dd218aea4b9d5998ee7026866, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 749404196}
     - targetCorrespondingSourceObject: {fileID: 6678140302057172000, guid: 5a7b6a8dd218aea4b9d5998ee7026866, type: 3}
       insertIndex: -1
       addedObject: {fileID: 419329265}
