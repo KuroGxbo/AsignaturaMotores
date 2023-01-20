@@ -206,7 +206,9 @@ public class PlayerController : MonoBehaviour
 
         horizontalSpeed = transform.forward;
 
-        playerSpeed = 10;
+        playerSpeed = 12;
+        jumpStrength = 2.5f;
+        Gravity = 0.02f;
 
         source.volume = 0.8f;
         Control.Move((VerticalSpeed + horizontalSpeed) * inputSpeed * Time.deltaTime);
