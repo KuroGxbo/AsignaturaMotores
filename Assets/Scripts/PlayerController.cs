@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
                     BarrelCreation();
                     break;
                 case "LevelLaberinth":
-                    level2ForwardMovement(SpeedLab);
+                    level2ForwardMovementLab(SpeedLab);
                     jump();
                     attackCommands();
                     rotationMouse();
@@ -174,6 +174,35 @@ public class PlayerController : MonoBehaviour
         Animation.SetFloat("speed", playerSpeed);
     }
 
+    void level2ForwardMovementLab(float inputSpeed)
+    {
+        float verticalInput = Input.GetAxis("Vertical");
+        float horizontalInput = Input.GetAxis("Horizontal");
+        playerSpeed = (verticalInput != 0 || horizontalInput != 0) ? 5.0f : 0.0f;
+
+        Speed = inputSpeed;
+        if (Input.GetKey(KeyCode.LeftShift) && (verticalInput != 0 || horizontalInput != 0))
+        {
+            Speed = inputSpeed * 2;
+            playerSpeed = 10;
+        }
+
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+
+            Speed = inputSpeed / 2;
+            playerSpeed = 1;
+            Animation.SetBool("crouch", true);
+        }
+        else
+        {
+            Animation.SetBool("crouch", false);
+        }
+        horizontalSpeed = verticalInput * transform.forward;
+        Vector3 verticalSpeed = horizontalInput * transform.right;
+        Control.Move((horizontalSpeed + VerticalSpeed + verticalSpeed) * Speed * Time.deltaTime);
+        Animation.SetFloat("speed", playerSpeed);
+    }
     void level1ForwardMovement(float inputSpeed)
     {
         float horizontalInput = Input.GetAxis("Horizontal");
