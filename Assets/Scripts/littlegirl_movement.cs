@@ -19,12 +19,22 @@ public class littlegirl_movement : MonoBehaviour
     void Update()
     {
         agent.SetDestination(playerObject.transform.position);
-        if (agent.velocity.magnitude < 2.0f)
+        if (agent.velocity.magnitude > 5)
+        {
+            animationController.SetFloat("speed", 10);
+        }
+        else if (agent.velocity.magnitude > 0)
+        {
+            animationController.SetFloat("speed", 1);
+        }
+        else
         {
             animationController.SetFloat("speed", 0);
-        } else
+        }
+
+        if (agent.remainingDistance < 0.1f)
         {
-            animationController.SetFloat("speed", 5);
+            animationController.SetFloat("speed", 0);
         }
     }
 }

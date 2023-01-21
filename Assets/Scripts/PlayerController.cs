@@ -75,10 +75,10 @@ public class PlayerController : MonoBehaviour
                     rotationMouse();
                     break;
                 case "Level1":
-                    level2ForwardMovement(SpeedLv1);
+                    level2ForwardMovementLab(SpeedLv1);
                     jump();
                     attackCommands();
-                    level2Rotation();
+                    rotationMouse();
                     break;
                 default:
                     level2ForwardMovement(SpeedLv1);
@@ -288,6 +288,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("collision");
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "building")
         {
             Debug.Log("block");
@@ -305,9 +307,18 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == "Obstacle")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
 
     private void OnCollisionStay(Collision collision)
     {
+        Debug.Log("collision");
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "building")
         {
             Debug.Log("block");
@@ -317,6 +328,10 @@ public class PlayerController : MonoBehaviour
                 Vector3 target = new Vector3(movement, transform.position.y, transform.position.z);
                 transform.position = Vector3.Lerp(transform.position, target, SpeedRunningVertical * Time.deltaTime);
             }
+        }
+        else if (collision.gameObject.tag == "Obstacle")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
     public void TakeDamage(float damage)

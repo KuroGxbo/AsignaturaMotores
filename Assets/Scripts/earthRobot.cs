@@ -1,28 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    private float rotateSpeed = 0.5f;
-    private float radius = 5f;
-
-    private Vector3 _centre;
-    private float _angle;
+    public GameObject playerObject;
+    public NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
     {
-        _centre = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        _angle -= rotateSpeed * Time.deltaTime;
-
-        var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * radius;
-
-        transform.position = new Vector3(_centre.x + offset.x, transform.position.y, _centre.z + offset.y);
+        agent.SetDestination(playerObject.transform.position);
     }
 }
