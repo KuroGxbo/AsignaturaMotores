@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private float maxHealth = 100f;
     private bool barrilesCreados = false;
     private bool keyPressed = false;
+    public GameObject npc;
 
 
 
@@ -67,6 +68,11 @@ public class PlayerController : MonoBehaviour
                     slideCharacter();
                     jump();
                     BarrelCreation();
+                    Debug.Log(Vector3.Distance(npc.transform.position, transform.position));
+                    if (Vector3.Distance(npc.transform.position,transform.position) < 2)
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    }
                     break;
                 case "LevelLaberinth":
                     level2ForwardMovementLab(SpeedLab);
@@ -334,6 +340,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
+
     public void TakeDamage(float damage)
     {
         health -= damage;

@@ -65,7 +65,7 @@ PrefabInstance:
       addedObject: {fileID: 6319459301949841060}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 53f97586c391531458012a10b346785c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5871802723405972621}
+      addedObject: {fileID: 5848661986791212973}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 53f97586c391531458012a10b346785c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5699066121629536538}
@@ -95,7 +95,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &5871802723405972621
+--- !u!114 &5848661986791212973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,10 +104,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6109924611094652899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 505cc772bbbf8614da5b2f2b07a9cc0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 74b63cd18a4f45c44a0ea2865ebc9cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObject: {fileID: 0}
 --- !u!195 &5699066121629536538
 NavMeshAgent:
   m_ObjectHideFlags: 0

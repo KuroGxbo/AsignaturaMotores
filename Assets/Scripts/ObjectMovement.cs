@@ -20,8 +20,6 @@ public class ObjectMovement : MonoBehaviour
     void Update()
     {
         agent.SetDestination(playerObject.transform.position);
-        Debug.Log(1);
-        Debug.Log(agent.remainingDistance);
         if (agent.velocity.magnitude > 5)
         {
             animationController.SetFloat("speed", 10);
@@ -31,12 +29,6 @@ public class ObjectMovement : MonoBehaviour
         } else
         {
             animationController.SetFloat("speed", 0);
-        }
-
-        if (agent.remainingDistance < 0.1f)
-        {
-            animationController.SetFloat("speed", 0);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
