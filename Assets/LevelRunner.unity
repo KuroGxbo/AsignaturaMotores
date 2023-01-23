@@ -1177,6 +1177,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1008418837}
     - target: {fileID: 5848661986791212973, guid: 53631d13b5dd01f418704c7f155b8fc0, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 1409962273}
+    - target: {fileID: 5848661986791212973, guid: 53631d13b5dd01f418704c7f155b8fc0, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 750297444}
@@ -1569,10 +1573,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1398952977968327767, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+    - {fileID: 8654474105103468074, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7820337949866380571, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 934996697}
     - targetCorrespondingSourceObject: {fileID: 7820337949866380571, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 934996696}
@@ -2295,6 +2304,59 @@ CapsuleCollider:
   m_Height: 2.07
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &934996697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934996695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 012d8bcdd713ed44e99be90b37113c7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 934996703}
+  speedRunner: 12
+  speedLab: 50
+  speedLv1: 50
+  jumpStrength: 2.3
+  health: 0
+  gravity: 0.02
+  speedRunnerVertical: 5
+  rotationSpeed: 2
+  simpleJumpSpeed: 12
+  speedJump: 0
+  menu: {fileID: 1409962273}
+  Obj: {fileID: 0}
+  filaBarriles1: {fileID: 4872004130233163035, guid: 3685efebb9d9c0548b11c8e3cfe1f543, type: 3}
+  filaBarriles2: {fileID: 2498637677210013293, guid: 697b9620f1002f946a2ee6fae24ddc95, type: 3}
+  filaBarriles3: {fileID: 7467374331972207437, guid: 5e61a1d75569930479c797a0a7ff3f1c, type: 3}
+  filaBarriles4: {fileID: 2663930254148957487, guid: ce4bd5f99e0779241bfb8449367cc44e, type: 3}
+  filaBarriles5: {fileID: 4607359796921796794, guid: 9b1e8e5b523e36e4eb077938ad460cf2, type: 3}
+  animation: {fileID: 934996698}
+  VerticalSpeed: {x: 0, y: 0, z: 0}
+  coinSound: {fileID: 8300000, guid: beb27a33393b5124aa9140a4677ea6f6, type: 3}
+  source: {fileID: 934996700}
+  sfxSource: {fileID: 1774581057}
+  scoreText: {fileID: 1472416166}
+  score: 0
+  hearth: {fileID: 0}
+--- !u!95 &934996698 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2837409552554812796, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+  m_PrefabInstance: {fileID: 548494114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &934996700 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7405711577532681252, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+  m_PrefabInstance: {fileID: 548494114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &934996703 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 4112533984729211730, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+  m_PrefabInstance: {fileID: 548494114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &957756743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4495,6 +4557,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84147b87204d0a0478bae9558d656ea2, type: 3}
+--- !u!82 &1774581057 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1671190754911457705, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+  m_PrefabInstance: {fileID: 548494114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1778092720
 PrefabInstance:
   m_ObjectHideFlags: 0

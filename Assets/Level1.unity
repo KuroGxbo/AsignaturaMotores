@@ -1805,10 +1805,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1398952977968327767, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+    - {fileID: 8654474105103468074, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7820337949866380571, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 969694242}
   m_SourcePrefab: {fileID: 100100000, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
 --- !u!1001 &442203032
 PrefabInstance:
@@ -3309,6 +3314,70 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7820337949866380571, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
   m_PrefabInstance: {fileID: 431087896}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &969694242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969694240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 012d8bcdd713ed44e99be90b37113c7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 969694244}
+  speedRunner: 10
+  speedLab: 10
+  speedLv1: 10
+  jumpStrength: 3
+  health: 100
+  gravity: 0.1
+  speedRunnerVertical: 10
+  rotationSpeed: 5
+  simpleJumpSpeed: 2
+  speedJump: 10
+  menu: {fileID: 424317559}
+  Obj: {fileID: 0}
+  filaBarriles1: {fileID: 0}
+  filaBarriles2: {fileID: 0}
+  filaBarriles3: {fileID: 0}
+  filaBarriles4: {fileID: 0}
+  filaBarriles5: {fileID: 0}
+  animation: {fileID: 969694246}
+  VerticalSpeed: {x: 0, y: 0, z: 0}
+  coinSound: {fileID: 8300000, guid: beb27a33393b5124aa9140a4677ea6f6, type: 3}
+  source: {fileID: 969694243}
+  sfxSource: {fileID: 1156931511}
+  scoreText: {fileID: 987448993}
+  score: 0
+  hearth: {fileID: 160940933}
+--- !u!82 &969694243 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7405711577532681252, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+  m_PrefabInstance: {fileID: 431087896}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &969694244 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 4112533984729211730, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+  m_PrefabInstance: {fileID: 431087896}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &969694246 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2837409552554812796, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+  m_PrefabInstance: {fileID: 431087896}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &987448993 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 169643306265182039, guid: 7855a4f98c5826e4a93ad3df039397c2, type: 3}
+  m_PrefabInstance: {fileID: 129425240}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1012496106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3643,6 +3712,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d254d0d8f5be6e64f9ae69acbbf9fe6b, type: 3}
+--- !u!82 &1156931511 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1671190754911457705, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+  m_PrefabInstance: {fileID: 431087896}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1234173897
 PrefabInstance:
   m_ObjectHideFlags: 0

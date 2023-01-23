@@ -9,6 +9,7 @@ public class ObjectStateMachine : StateMachine
     public GameObject npc;
     public NavMeshAgent npc_agent;
     public Animator animation;
+    public PauseMenu menu;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +19,8 @@ public class ObjectStateMachine : StateMachine
 
         currentState = stopRun;
         //Condition
-        FarAwayPlayerCondition farAway = new FarAwayPlayerCondition(player, npc,1.7f);
-        NearToPlayerCondition near = new NearToPlayerCondition(player, npc, 1.7f);
+        FarAwayPlayerCondition farAway = new FarAwayPlayerCondition(player, npc,1.7f, menu);
+        NearToPlayerCondition near = new NearToPlayerCondition(player, npc, 1.7f, menu);
 
         //Transition
         Transition stopToFollow = new Transition(follow, farAway);

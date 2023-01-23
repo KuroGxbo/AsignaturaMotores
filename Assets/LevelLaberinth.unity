@@ -1815,7 +1815,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.06
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8654474105103468074, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 928315047}
+    - target: {fileID: 8654474105103468074, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 7430642605981622480}
+    m_RemovedComponents:
+    - {fileID: 1398952977968327767, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
+    - {fileID: 5329122066284011019, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4077,6 +4087,7 @@ MonoBehaviour:
   agent: {fileID: 370432779}
   npcObject: {fileID: 370432775}
   animation: {fileID: 370432776}
+  menu: {fileID: 928315047}
 --- !u!195 &370432779 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 193705312, guid: dd72f5b2d1c46ff45aaf4b1684872c68, type: 3}
@@ -8382,7 +8393,7 @@ PrefabInstance:
     - target: {fileID: 2229943036740823397, guid: 9fdc6c8dc8ba4294c8ff1a14ee4f4c37, type: 3}
       propertyPath: playerSpecs
       value: 
-      objectReference: {fileID: 1142383221}
+      objectReference: {fileID: 0}
     - target: {fileID: 2229943036740823398, guid: 9fdc6c8dc8ba4294c8ff1a14ee4f4c37, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
@@ -11983,17 +11994,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7820337949866380571, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
   m_PrefabInstance: {fileID: 135959737}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1142383221 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1398952977968327767, guid: 6e6330edd4ef57d4ba187a8a6d42722e, type: 3}
-  m_PrefabInstance: {fileID: 135959737}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142383220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc20553d57dbf04d9c28d550db7321e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1142644495
 PrefabInstance:
   m_ObjectHideFlags: 0

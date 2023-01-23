@@ -9,6 +9,7 @@ public class AgentStateMachine : StateMachine
     public NavMeshAgent agent;
     public GameObject npcObject;
     public Animator animation;
+    public PauseMenu menu;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +21,8 @@ public class AgentStateMachine : StateMachine
         currentState = stopAgent;
 
         //Setup Conditions
-        PlayerNear agentClose = new PlayerNear(player, npcObject, 30.5f);
-        PlayerFar agentFarAway = new PlayerFar(player, npcObject, 30.5f);
+        PlayerNear agentClose = new PlayerNear(player, npcObject, 30.5f, menu);
+        PlayerFar agentFarAway = new PlayerFar(player, npcObject, 30.5f, menu);
         PlayerDanceCondition danceforSomeTime = new PlayerDanceCondition();
 
         //Transition

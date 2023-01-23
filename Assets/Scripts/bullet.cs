@@ -21,7 +21,7 @@ public class bullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("shoot");
-        PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+        PlayerMovementStateMachine player = collision.gameObject.GetComponent<PlayerMovementStateMachine>();
         if (player != null )
         {
             player.TakeDamage(5f);
