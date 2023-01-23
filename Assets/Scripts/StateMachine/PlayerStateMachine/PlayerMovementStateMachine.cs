@@ -22,6 +22,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     private float maxHealth = 100f;
     private bool barrilesCreados = false;
     public State currentState;
+    public GameObject npc;
 
     void Start()
     {
@@ -78,6 +79,17 @@ public class PlayerMovementStateMachine : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "LevelRunner")
         {
             BarrelCreation();
+            if (Vector3.Distance(npc.transform.position, transform.position) < 2)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
+        if (SceneManager.GetActiveScene().name == "LevelLaberinth")
+        {
+            if (Vector3.Distance(npc.transform.position, transform.position) < 30)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
 
