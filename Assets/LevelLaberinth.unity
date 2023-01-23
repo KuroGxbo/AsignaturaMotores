@@ -345,6 +345,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d964929fab3ac47b1955be9ef76add, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -362,6 +366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -423,6 +431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -748,6 +760,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2410,6 +2426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d964929fab3ac47b1955be9ef76add, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3086,6 +3106,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d964929fab3ac47b1955be9ef76add, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3460,6 +3484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4370,6 +4398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d964929fab3ac47b1955be9ef76add, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5587,6 +5619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d964929fab3ac47b1955be9ef76add, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6165,6 +6201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -7095,6 +7135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d964929fab3ac47b1955be9ef76add, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7112,6 +7156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -7380,6 +7428,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 677454087977606452, guid: 5f1b5293492e8ef498d0bf4221e0105e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 04dae468de9eb9b4680e3e4f8ecc641d, type: 2}
     - target: {fileID: 1122546754284687179, guid: 5f1b5293492e8ef498d0bf4221e0105e, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -8198,6 +8250,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9060,6 +9116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9121,6 +9181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9316,6 +9380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: 98e21ec494e3dad439978103464d0336, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9757,6 +9825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -9935,6 +10007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d964929fab3ac47b1955be9ef76add, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10494,6 +10570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -10560,6 +10640,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -10621,6 +10705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -11715,6 +11803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d964929fab3ac47b1955be9ef76add, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12617,6 +12709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -14739,6 +14835,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d964929fab3ac47b1955be9ef76add, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14917,6 +15017,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d964929fab3ac47b1955be9ef76add, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16419,6 +16523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -17122,6 +17230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d964929fab3ac47b1955be9ef76add, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20370,6 +20482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8211804130551683027, guid: d2b7e915e30044974bb88215198140eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4d964929fab3ac47b1955be9ef76add, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20850,6 +20966,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinBlue
       objectReference: {fileID: 0}
+    - target: {fileID: 1265943177216062166, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e43081b51444594478ad54d68a8aa45e, type: 2}
     - target: {fileID: 5902021410402518119, guid: 84fb47ef73ea8344cad7a20f4c725926, type: 3}
       propertyPath: m_RootOrder
       value: -1

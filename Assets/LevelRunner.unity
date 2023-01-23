@@ -1383,6 +1383,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5079424409156013154, guid: 51bb9441358e31247a8e53a0d77418bf, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d761dc26699fe146be3761a6e87b55f, type: 2}
     - target: {fileID: 5967341469965716618, guid: 51bb9441358e31247a8e53a0d77418bf, type: 3}
       propertyPath: m_Name
       value: Lava (3)
@@ -2559,6 +2563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5079424409156013154, guid: 51bb9441358e31247a8e53a0d77418bf, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d761dc26699fe146be3761a6e87b55f, type: 2}
     - target: {fileID: 5967341469965716618, guid: 51bb9441358e31247a8e53a0d77418bf, type: 3}
       propertyPath: m_Name
       value: Lava (1)
@@ -6067,7 +6075,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072982126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.93, z: 68.29}
+  m_LocalPosition: {x: 0, y: 1.98, z: 67.81}
   m_LocalScale: {x: 0.84, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6116,7 +6124,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7c590ba74621824087e4acfde8021a9, type: 2}
+  - {fileID: -876546973899608171, guid: 98e21ec494e3dad439978103464d0336, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
